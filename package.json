@@ -1,20 +1,19 @@
 {
-	"name": "ff1-calculator",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
+	"name": "portfolio site",
+	"version": "1.0.0",
+	"description": "A Node.js application deployed on Netlify",
+	"main": "index.js",
 	"scripts": {
-	 
-	  "preview": "vite preview"
+	  "start": "node index.js",
+	  "build": "echo 'No build step required'",
+	  "dev": "nodemon index.js"
 	},
+	"author": "Your Name",
+	"license": "MIT",
 	"dependencies": {
-	  "vue": "^3.4.29"
+	  "express": "^4.17.1"
 	},
 	"devDependencies": {
-	  "@vitejs/plugin-vue": "^5.0.5",
-	  "typescript": "^5.2.2",
-	  "vite": "^5.3.3",
-	  "vue-tsc": "^2.0.21"
+	  "nodemon": "^2.0.15"
 	}
   }
-  
