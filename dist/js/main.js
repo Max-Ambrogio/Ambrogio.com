@@ -25,7 +25,7 @@ if (document.body.classList.contains('page-home')) {
         intensity: 0.2,
         // angle2: Math.PI / 2,
         image1:'dist/img/profile-one.jpg',
-        image2:'dist/img/profile-two.jpg',
+        image2:'dist/img/hero-max.png',
         displacementImage: './dist/img/displacement-one.jpg',
     });
 
