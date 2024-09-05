@@ -819,8 +819,15 @@ footer .social a:hover {
   transition: left 0.5s 0s, right 0.5s 0s, top 0.3s 0.5s;
 }
 
+.copy a{
+  color: #fdeafc ;
+}
+
 .works {
-  margin: 0px 2%;
+  margin: 0px 25px;
+}
+.works .anywair {
+  position: relative;
 }
 .works .juventus {
   position: relative;
@@ -859,7 +866,7 @@ footer .social a:hover {
   }
 }
 .works .work .copy {
-  padding: 30px 0px 115px 30px;
+  padding: 40px 0px 0px 0px;
   margin-bottom: 350px;
 }
 @media screen and (min-width: 768px) {
@@ -899,6 +906,31 @@ footer .social a:hover {
 }
 .works .work .img:hover {
   background-position: center;
+}
+.works .work .any-one {
+  top: 100%;
+  right: 80px;
+  z-index: 0;
+  background-image: url("/dist/img/desktop-anywair.png");
+}
+@media screen and (min-width: 768px) {
+  .works .work .any-one {
+    top: 30%;
+    right: 20%;
+  }
+}
+.works .work .any-two {
+  top: 100%;
+  right: 80px;
+  z-index: 0;
+  background-image: url("/dist/img/mobile-anywair.png");
+}
+@media screen and (min-width: 768px) {
+  .works .work .any-two {
+    width: 25%;
+    height: 500px;
+    top: 10%;
+  }
 }
 .works .work .juve-one {
   top: 100%;
