@@ -1529,6 +1529,16 @@ footer .social a:hover {
   gap: 20px;
   grid-auto-flow: row dense;
 }
+
+@media (max-width: 600px) {
+  .photo-grid .visuals-render .images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+    grid-auto-flow: row dense;
+  }
+}
 .photo-grid .visuals-render .images img {
   width: 100%;
   border: 1px solid #fde8fc;
