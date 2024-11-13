@@ -87,10 +87,12 @@ if (document.body.classList.contains('page-home')) {
         y:-50,
         ease: 'power3.out',
         duration:3,
+        autoAlpha: 0,
         delay: 0,
     })
     gsap.from('.hero h2' , {
         opacity: 0,
+        autoAlpha: 0,
         y:-40,
         ease: 'power3.out',
         duration:2,
@@ -98,6 +100,7 @@ if (document.body.classList.contains('page-home')) {
     })
     gsap.from('.hero .accent-one' , {
         opacity: 0,
+        autoAlpha: 0,
         x:80,
         ease: 'power3.out',
         duration:2,
@@ -105,6 +108,7 @@ if (document.body.classList.contains('page-home')) {
     })
     gsap.from('.hero .accent-two' , {
         opacity: 0,
+        autoAlpha: 0,
         y:-60,
         ease: 'power3.out',
         duration:2,
@@ -112,6 +116,7 @@ if (document.body.classList.contains('page-home')) {
     })
     gsap.from('.hero .screen-one' , {
         opacity: 0,
+        autoAlpha: 0,
         x:-60,
         ease: 'power3.out',
         duration:2,
@@ -120,13 +125,15 @@ if (document.body.classList.contains('page-home')) {
     gsap.from('.hero .screen-two' , {
         opacity: 0,
         x:60,
+        autoAlpha: 0,
         ease: 'power3.out',
         duration:2,
         delay: 0.1,
     })
 
     gsap.to('.scramble',{
-        duration:4,
+        duration:2,
+        autoAlpha: 0,
         scrambleText:{
             delimiter:"",
             revealDelay:0.9,
@@ -138,7 +145,8 @@ if (document.body.classList.contains('page-home')) {
     })
     gsap.to('.scramble-two',{
         // delay:1,
-        duration:6,
+        duration:4,
+        autoAlpha: 0,
         scrambleText:{
             chars:"01",
             revealDelay:0.7,
@@ -149,7 +157,8 @@ if (document.body.classList.contains('page-home')) {
     })
     gsap.to('.scarmble-three',{
         // delay:1,
-        duration:8,
+        duration:6,
+        // autoAlpha: 0,
         scrambleText:{
             chars:"01",
             revealDelay:0.9,
@@ -161,6 +170,7 @@ if (document.body.classList.contains('page-home')) {
     gsap.to('.scramble-four',{
         // delay:1,
         duration:12,
+        // autoAlpha: 0,
         scrambleText:{
             chars:"01",
             revealDelay:0.7,
@@ -171,6 +181,7 @@ if (document.body.classList.contains('page-home')) {
     })
     gsap.from('.about p',{
         delay:0.5,
+        autoAlpha: 0,
         opacity:0,
         scrollTrigger: ".about",
         y:-50,
