@@ -513,6 +513,7 @@ main {
 
 .screen-one video{
   width: -webkit-fill-available;
+  /* opacity: .1; */
 }
 .screen-one{
   overflow: hidden;
@@ -527,18 +528,20 @@ main {
   /* background-image:; */
   background-position: center;
   background-size: cover;
-  background-color: #000000;
+  z-index: -1;
+  background-color: #0000006a;
+  /* opacity: .5; */
 }
 @media (min-width: 600px) {
   .hero .screen-one {
     grid-column: 6/11;
-    grid-row: 2/15;
+    grid-row: 2/9;
   }
 }
 @media (min-width: 1200px) {
   .hero .screen-one {
     grid-column: 7/12;
-    grid-row: 2/15;
+    grid-row: 2/11;
   }
 }
 .hero .screen-one img {
@@ -549,10 +552,11 @@ main {
      object-fit: cover;
 }
 .hero .screen-two {
-  /* box-shadow: 0px 0px 0px 2px #fdeafc; */
+  box-shadow: 0px 0px 0px 2px #fdeafc;
   grid-column: 7/11;
   grid-row: 8/13;
   position: relative;
+  
 }
 @media (min-width: 1200px) {
   .hero .screen-two {
@@ -566,6 +570,7 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  backdrop-filter: hue-rotate(120deg);
 }
 
 .about-pages {

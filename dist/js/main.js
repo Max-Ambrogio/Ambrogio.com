@@ -32,14 +32,14 @@ if (document.body.classList.contains('page-home')) {
     //     displacementImage: './dist/img/displacement-one.jpg',
     // });
 
-    // var hoverAnimation2 = new hoverEffect({
-    //     parent: document.querySelector(".screen-two"),
-    //     intensity: 0.2,
-    //     angle2: Math.PI / 4,
-    //     image1:'dist/img/profile-4.png',
-    //     image2:'dist/img/profile-three.jpg',
-    //     displacementImage: './dist/img/heightMap.png',
-    // });
+    var hoverAnimation2 = new hoverEffect({
+        parent: document.querySelector(".screen-two"),
+        intensity: 0.2,
+        angle2: Math.PI / 4,
+        image1:'dist/img/profile-4.png',
+        image2:'dist/img/profile-three.jpg',
+        displacementImage: './dist/img/heightMap.png',
+    });
 
 
     videoOne.onloadeddata = function() {
