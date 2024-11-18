@@ -42,45 +42,45 @@ if (document.body.classList.contains('page-home')) {
     });
 
 
-    videoOne.onloadeddata = function() {
-        homeRenders.to(videoOne, {
-            duration: 4,
-            currentTime:2,
-            ease: Quad.easeOut,
-            overwrite: true, 
-            pause: true
-        }, 2 + timelineStartPad)
-    }
+    // videoOne.onloadeddata = function() {
+    //     homeRenders.to(videoOne, {
+    //         duration: 4,
+    //         currentTime:2,
+    //         ease: Quad.easeOut,
+    //         overwrite: true, 
+    //         pause: true
+    //     }, 2 + timelineStartPad)
+    // }
 
-    videoTwo.onloadeddata = function() {
-        homeRenders.to(videoTwo, {
-            duration: 4,
-            currentTime: 2,
-            ease: Quad.easeOut,
-            overwrite: true, 
-            pause: true
-        }, 8 + timelineStartPad)
-    }
+    // videoTwo.onloadeddata = function() {
+    //     homeRenders.to(videoTwo, {
+    //         duration: 4,
+    //         currentTime: 2,
+    //         ease: Quad.easeOut,
+    //         overwrite: true, 
+    //         pause: true
+    //     }, 8 + timelineStartPad)
+    // }
 
-    videoThree.onloadeddata = function() {
-        homeRenders.to(videoThree, {
-            duration: 10,
-            currentTime: 2,
-            ease: Quad.easeOut,
-            overwrite: true, 
-            pause: true
-        }, 12 + timelineStartPad)
-    }
+    // videoThree.onloadeddata = function() {
+    //     homeRenders.to(videoThree, {
+    //         duration: 10,
+    //         currentTime: 2,
+    //         ease: Quad.easeOut,
+    //         overwrite: true, 
+    //         pause: true
+    //     }, 12 + timelineStartPad)
+    // }
 
-    videoFour.onloadeddata = function() {
-        homeRenders.to(videoFour, {
-            duration: 8,
-            currentTime: 2,
-            ease: Quad.easeOut,
-            overwrite: true, 
-            pause: true
-        }, 16 + timelineStartPad)
-    }  
+    // videoFour.onloadeddata = function() {
+    //     homeRenders.to(videoFour, {
+    //         duration: 8,
+    //         currentTime: 2,
+    //         ease: Quad.easeOut,
+    //         overwrite: true, 
+    //         pause: true
+    //     }, 16 + timelineStartPad)
+    // }  
 
     gsap.from('.hero h1' , {
         opacity: 0,
@@ -717,8 +717,81 @@ if (document.body.classList.contains('page-video')){
 
 }
 
+// Get all the cards and the style element
+const cards = document.querySelectorAll(".card");
+const styleElement = document.querySelector(".hover");
 
+cards.forEach(card => {
+  let timeout;
+  
+  card.addEventListener("mousemove", handleMove);
+  card.addEventListener("touchmove", handleMove);
+  card.addEventListener("mouseout", handleEnd);
+  card.addEventListener("touchend", handleEnd);
+  card.addEventListener("touchcancel", handleEnd);
 
+  function handleMove(e) {
+    // Normalize touch/mouse
+    let pos = [e.offsetX, e.offsetY];
+    e.preventDefault();
+
+    if (e.type === "touchmove") {
+      pos = [e.touches[0].clientX, e.touches[0].clientY];
+    }
+
+    // Math for mouse position
+    const cardHeight = card.offsetHeight;
+    const cardWidth = card.offsetWidth;
+    const l = pos[0];
+    const t = pos[1];
+    const px = Math.abs(Math.floor(100 / cardWidth * l) - 100);
+    const py = Math.abs(Math.floor(100 / cardHeight * t) - 100);
+    const pa = (50 - px) + (50 - py);
+
+    // Math for gradient / background positions
+    const lp = 50 + (px - 50) / 1.5;
+    const tp = 50 + (py - 50) / 1.5;
+    const px_spark = 50 + (px - 50) / 7;
+    const py_spark = 50 + (py - 50) / 7;
+    const p_opc = 20 + (Math.abs(pa) * 1.5);
+    const ty = ((tp - 50) / 2) * -1;
+    const tx = ((lp - 50) / 1.5) * 0.5;
+
+    // CSS to apply for active card
+    const gradPos = `background-position: ${lp}% ${tp}%;`;
+    const sprkPos = `background-position: ${px_spark}% ${py_spark}%;`;
+    const opacity = `opacity: ${p_opc / 100};`;
+    const transform = `transform: rotateX(${ty}deg) rotateY(${tx}deg);`;
+
+    // Set style for pseudo-elements
+    const styleContent = `
+      .card:hover:before { ${gradPos} }
+      .card:hover:after { ${sprkPos} ${opacity} }
+    `;
+
+    // Apply styles dynamically
+    styleElement.innerHTML = styleContent;
+    card.style = transform;
+    card.classList.remove("active");
+    card.classList.remove("animated");
+
+    if (e.type === "touchmove") {
+      return false; // Prevent the default behavior for touchmove
+    }
+
+    clearTimeout(timeout);
+  }
+
+  function handleEnd() {
+    // Remove the styles and add animation after a delay
+    card.removeAttribute("style");
+    styleElement.innerHTML = "";
+
+    timeout = setTimeout(() => {
+      card.classList.add("animated");
+    }, 2500);
+  }
+});
 
 
 
