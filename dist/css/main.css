@@ -2004,6 +2004,11 @@ footer .social a:hover {
 @media screen and (max-width: 600px) {
   .cards {
     flex-direction: column;
+    align-content: center;
+  }
+  .card{
+    width: 47vh;
+    height: 66vh;
   }
 }
 
