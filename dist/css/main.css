@@ -1993,17 +1993,16 @@ footer .social a:hover {
 
 
 .cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 50% 50%;
   margin-bottom: 60px;
   gap: 70px;
-  justify-content: space-around;
+  justify-items: center;
 }
 
 @media screen and (max-width: 600px) {
   .cards {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-content: center;
   }
   .card{
