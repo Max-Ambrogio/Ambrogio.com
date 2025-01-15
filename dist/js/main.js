@@ -54,47 +54,47 @@ if (document.body.classList.contains('page-home')) {
     })
     gsap.from('.letters img' , {
         scale:0,
+        opacity:0,
         y: 80,
-        autoAlpha: 0,
         ease: 'power3.out',
         duration:1,
         // stagger:.1,
     })
 
-    const trip = gsap.timeline({  repeat: -1,
-        repeatDelay: 0.2,
-        yoyo: true,});
+    // const trip = gsap.timeline({  repeat: -1,
+    //     repeatDelay: 0.2,
+    //     yoyo: true,});
 
-    trip.to("#first", {
-        duration: 1,
-        ease: "expo.inOut",
-        y:90,
-    })
-    trip.to("#second", {
-        duration: 1,
-        ease: "expo.inOut",
-        y:-90,
-    })
-    trip.to("#third", {
-        duration: 1,
-        ease: "expo.inOut",
-        y:90,
-    })
-    trip.to("#fourth", {
-        duration: 1,
-        ease: "expo.inOut",
-        y:-90,
-    })
-    trip.to("#fith", {
-        duration: 1,
-        ease: "expo.inOut",
-        y:90,
-    })
-    trip.to("#sixth", {
-        duration: 1,
-        ease: "expo.inOut",
-        y:-90,
-    })
+    // trip.to("#first", {
+    //     duration: 0.5,
+    //     ease: "expo.inOut",
+    //     y:90,
+    // })
+    // trip.to("#second", {
+    //     duration: 0.5,
+    //     ease: "expo.inOut",
+    //     y:-90,
+    // })
+    // trip.to("#third", {
+    //     duration: 0.5,
+    //     ease: "expo.inOut",
+    //     y:90,
+    // })
+    // trip.to("#fourth", {
+    //     duration: 0.5,
+    //     ease: "expo.inOut",
+    //     y:-90,
+    // })
+    // trip.to("#fith", {
+    //     duration: 0.5,
+    //     ease: "expo.inOut",
+    //     y:90,
+    // })
+    // trip.to("#sixth", {
+    //     duration: 0.5,
+    //     ease: "expo.inOut",
+    //     y:-90,
+    // })
 
 
 
