@@ -2,102 +2,31 @@
 // // create the smooth scroller FIRST!
 
 window.onload = function () {
-    var element = document.getElementById('video');
-    element.muted = "muted";
+
 }
 
 if (document.body.classList.contains('page-home')) {
 
-    const videoOne = document.querySelector('#webdev video')
-    const videoTwo = document.querySelector('#ct')
-    const videoThree = document.querySelector('#renders')
-    const videoFour = document.querySelector('#video-p')
-        
-    var homeRenders = gsap.timeline({paused: true, duration: 24});
+    
+    // gsap.from('.header' , {
+    //     opacity: 0,
+    //     autoAlpha: 0,
+    //     y:80,
+    //     ease: 'power3.out',
+    //     duration:2,
+    //     delay: 0.5,
+    // })
 
-    window.addEventListener('scroll', e => {
-        // console.log(window.scrollY, document.body.scrollHeight)
-
-        homeRenders.progress(window.scrollY / document.body.scrollHeight)
-    })
-
-    let timelineStartPad = 1;
-
-    // var hoverAnimation = new hoverEffect({
-    //     parent: document.querySelector(".screen-one"),
-    //     intensity: 0.2,
-    //     // angle2: Math.PI / 2,
-    //     image1:'dist/img/profile-one.jpg',
-    //     image2:'dist/img/hero-max.png',
-    //     displacementImage: './dist/img/displacement-one.jpg',
-    // });
-
-    var hoverAnimation2 = new hoverEffect({
-        parent: document.querySelector(".screen-two"),
-        intensity: 0.2,
-        angle2: Math.PI / 4,
-        image1:'dist/img/profile-4.png',
-        image2:'dist/img/profile-three.jpg',
-        displacementImage: './dist/img/heightMap.png',
-    });
-
-
-    // videoOne.onloadeddata = function() {
-    //     homeRenders.to(videoOne, {
-    //         duration: 4,
-    //         currentTime:2,
-    //         ease: Quad.easeOut,
-    //         overwrite: true, 
-    //         pause: true
-    //     }, 2 + timelineStartPad)
-    // }
-
-    // videoTwo.onloadeddata = function() {
-    //     homeRenders.to(videoTwo, {
-    //         duration: 4,
-    //         currentTime: 2,
-    //         ease: Quad.easeOut,
-    //         overwrite: true, 
-    //         pause: true
-    //     }, 8 + timelineStartPad)
-    // }
-
-    // videoThree.onloadeddata = function() {
-    //     homeRenders.to(videoThree, {
-    //         duration: 10,
-    //         currentTime: 2,
-    //         ease: Quad.easeOut,
-    //         overwrite: true, 
-    //         pause: true
-    //     }, 12 + timelineStartPad)
-    // }
-
-    // videoFour.onloadeddata = function() {
-    //     homeRenders.to(videoFour, {
-    //         duration: 8,
-    //         currentTime: 2,
-    //         ease: Quad.easeOut,
-    //         overwrite: true, 
-    //         pause: true
-    //     }, 16 + timelineStartPad)
-    // }  
-
-    gsap.from('.hero h1' , {
-        opacity: 0,
-        y:-50,
-        ease: 'power3.out',
-        duration:3,
-        autoAlpha: 0,
-        delay: 0,
-    })
-    gsap.from('.hero h2' , {
+    gsap.from('.header .logo' , {
         opacity: 0,
         autoAlpha: 0,
-        y:-40,
+        y:-80,
         ease: 'power3.out',
         duration:2,
-        delay: 0.5,
+        delay: 0.8,
     })
+  
+
     gsap.from('.hero .accent-one' , {
         opacity: 0,
         autoAlpha: 0,
@@ -114,22 +43,82 @@ if (document.body.classList.contains('page-home')) {
         duration:2,
         delay: 1,
     })
-    gsap.from('.hero .screen-one' , {
+    
+    gsap.from('.letters' , {
         opacity: 0,
-        autoAlpha: 0,
-        x:-60,
+        y:60,
+     
         ease: 'power3.out',
         duration:2,
         delay: 0.1,
     })
-    gsap.from('.hero .screen-two' , {
-        opacity: 0,
-        x:60,
+    gsap.from('.letters img' , {
+        scale:0,
+        y: 80,
         autoAlpha: 0,
         ease: 'power3.out',
-        duration:2,
-        delay: 0.1,
+        duration:1,
+        // stagger:.1,
     })
+
+    const trip = gsap.timeline({  repeat: -1,
+        repeatDelay: 0.2,
+        yoyo: true,});
+
+    trip.to("#first", {
+        duration: 1,
+        ease: "expo.inOut",
+        y:90,
+    })
+    trip.to("#second", {
+        duration: 1,
+        ease: "expo.inOut",
+        y:-90,
+    })
+    trip.to("#third", {
+        duration: 1,
+        ease: "expo.inOut",
+        y:90,
+    })
+    trip.to("#fourth", {
+        duration: 1,
+        ease: "expo.inOut",
+        y:-90,
+    })
+    trip.to("#fith", {
+        duration: 1,
+        ease: "expo.inOut",
+        y:90,
+    })
+    trip.to("#sixth", {
+        duration: 1,
+        ease: "expo.inOut",
+        y:-90,
+    })
+
+
+
+    var shiver = 20;
+    TweenMax.set(".letters img", {xPercent:-10, yPercent:-10});
+    
+    var tl = new TimelineMax({repeat:-1, onRepeat:shiverMe })
+    
+    .to(".letters img", 0.1, {
+         x:function(){return shiver},
+         rotation:function(){return shiver},
+         yoyo:true,
+         repeat:1,
+         ease:Power1.easeOut,
+        //  stagger: 0.03,
+    })
+    
+    function shiverMe(){shiver = 10 * getRandomArbitrary(.15,0.1);
+                        tl.invalidate();
+    }
+    
+    function getRandomArbitrary(min, max) {
+      return Math.random() * (max - min) + min;
+    }
 
     gsap.to('.scramble',{
         duration:2,
@@ -189,25 +178,61 @@ if (document.body.classList.contains('page-home')) {
         duration:3,
         stagger:1,
     })
+    gsap.registerPlugin(Observer);
+    
+    let sections = document.querySelectorAll("section"),
+      images = document.querySelectorAll(".bg"),
+      outerWrappers = gsap.utils.toArray(".outer"),
+      innerWrappers = gsap.utils.toArray(".inner"),
+      currentIndex = -1,
+      wrap = gsap.utils.wrap(0, sections.length),
+      animating;
+    
+    gsap.set(outerWrappers, { yPercent: 100 });
+    gsap.set(innerWrappers, { yPercent: -100 });
+    
+    function gotoSection(index, direction) {
+      index = wrap(index); // make sure it's valid
+      animating = true;
+      let fromTop = direction === -1,
+          dFactor = fromTop ? -1 : 1,
+          tl = gsap.timeline({
+            defaults: { duration: 1.25, ease: "power1.inOut" },
+            onComplete: () => animating = false
+          });
+      if (currentIndex >= 0) {
+        // The first time this function runs, current is -1
+        gsap.set(sections[currentIndex], { zIndex: 0 });
+        tl.to(images[currentIndex], { yPercent: -15 * dFactor })
+          .set(sections[currentIndex], { autoAlpha: 0 });
+      }
+      gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+      tl.fromTo([outerWrappers[index], innerWrappers[index]], { 
+          yPercent: i => i ? -100 * dFactor : 100 * dFactor
+        }, { 
+          yPercent: 0 
+        }, 0)
+        .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
+        
+      currentIndex = index;
+    }
+    
+    Observer.create({
+      type: "wheel,touch,pointer",
+      wheelSpeed: -1,
+      onDown: () => !animating && gotoSection(currentIndex - 1, -1),
+      onUp: () => !animating && gotoSection(currentIndex + 1, 1),
+      tolerance: 10,
+      preventDefault: true
+    });
+    
+    gotoSection(0, 1);
+    
+    // original: https://codepen.io/BrianCross/pen/PoWapLP
+    // horizontal version: https://codepen.io/GreenSock/pen/xxWdeMK
 }
-gsap.from('.about-pages h1',{
-    // delay:1,
-    opacity:0,
-    scrollTrigger: ".about-pages",
-    y:-50,
-    ease: 'power3.out',
-    duration:3,
-    stagger:2,
-})
-gsap.from('.about-pages p',{
-    delay:0.5,
-    opacity:0,
-    scrollTrigger: ".about-pages",
-    y:-50,
-    ease: 'power3.out',
-    duration:1.5,
-    stagger:2,
-})
+
+
 
 if (document.body.classList.contains('page-webdev')){
 
@@ -468,218 +493,9 @@ if (document.body.classList.contains('page-webdev')){
         rotation: -3,
         ease:"power3.out",
     })
-    
-    // const oleaOne = gsap.timeline({
-    //     scrollTrigger:{
-    //         trigger:'.olea-shop',
-    //         start: "top 90%",
-    //         end:"bottom 60%",
-    //         scrub: true,
-    //         // markers: true,
-    //     },
-    // });
-    // const oleaTwo = gsap.timeline({
-    //     scrollTrigger:{
-    //         trigger:'.olea-shop',
-    //         start: "top 90%",
-    //         end:"bottom 90%",
-    //         scrub: true,
-    //         // markers: true,
-    //     },
-    // });
-    // oleaOne.to(".olea-one ",{
-    //     y:50,
-    //     rotation: 0,
-    //     ease:"power3.out",
-    // })
-    // oleaOne.to(".olea-one",{
-    //     y:-60,
-    //     rotation: 3,
-    //     ease:"power3.out",
-    // })
-    // oleaTwo.to(".olea-two ",{
-    //     x:0,
-    //     y:100,
-    //     rotation: 0,
-    //     ease:"power3.out",
-    // })
-    // oleaTwo.to(".olea-two",{
-    //     x:-10,
-    //     y:-60,
-    //     rotation: -3,
-    //     ease:"power3.out",
-    // })
-    
-    // const pallasOne = gsap.timeline({
-    //     scrollTrigger:{
-    //         trigger:'.pallas-wf',
-    //         start: "top 90%",
-    //         end:"bottom 60%",
-    //         scrub: true,
-    //         // markers: true,
-    //     },
-    // });
-    // const pallasTwo = gsap.timeline({
-    //     scrollTrigger:{
-    //         trigger:'.pallas-wf',
-    //         start: "top 90%",
-    //         end:"bottom 90%",
-    //         scrub: true,
-    //         // markers: true,
-    //     },
-    // });
-    // pallasOne.to(".pallas-one ",{
-    //     y:50,
-    //     rotation: 0,
-    //     ease:"power3.out",
-    // })
-    // pallasOne.to(".pallas-one",{
-    //     y:-60,
-    //     rotation: 3,
-    //     ease:"power3.out",
-    // })
-    // pallasTwo.to(".pallas-two ",{
-    //     x:0,
-    //     y:100,
-    //     rotation: 0,
-    //     ease:"power3.out",
-    // })
-    // pallasTwo.to(".pallas-two",{
-    //     x:-10,
-    //     y:-60,
-    //     rotation: -3,
-    //     ease:"power3.out",
-    // })
-    
-    
-    // gsap.from('.works .work .juventus h2' , {
-    //     scrollTrigger:{
-    //         trigger:'.juventus',
-    //         start: "top 40%",
-    //         // markers: true,
-    //     },
-    //     opacity:0,
-    //     y: -50,
-    //     stagger:0.5,
-    //     ease: 'power3.out',
-    //     duration:1,
-    // })
-    // gsap.from('.works .work .juventus p' , {
-    //     scrollTrigger:{
-    //         trigger:'.juventus',
-    //         start: "top 40%",
-    //         // markers: true,
-    //     },
-    //     opacity:0,
-    //     y: -50,
-    //     stagger:0.5,
-    //     ease: 'power3.out',
-    //     duration:1,
-    //     delay:.5,
-    // })
-    // gsap.from('.works .work .juventus a' , {
-    //     scrollTrigger:{
-    //         trigger:'.juventus',
-    //         start: "top 40%",
-    //         // markers: true,
-    //     },
-    //     opacity:0,
-    //     y: -50,
-    //     stagger:0.5,
-    //     ease: 'power3.out',
-    //     duration:1,
-    //     delay:.8,
-    // })
-    // gsap.from('.works .work .truly h2' , {
-    //     scrollTrigger:{
-    //         trigger:'.truly',
-    //         start: "top 40%",
-    //         // markers: true,
-    //     },
-    //     opacity:0,
-    //     y: -50,
-    //     stagger:0.5,
-    //     ease: 'power3.out',
-    //     duration:1,
-    // })
-    // gsap.from('.works .work .truly p' , {
-    //     scrollTrigger:{
-    //         trigger:'.truly',
-    //         start: "top 40%",
-    //         // markers: true,
-    //     },
-    //     opacity:0,
-    //     y: -50,
-    //     stagger:0.5,
-    //     ease: 'power3.out',
-    //     duration:1,
-    //     delay:.5,
-    // })
-    // gsap.from('.works .work .truly a' , {
-    //     scrollTrigger:{
-    //         trigger:'.truly',
-    //         start: "top 40%",
-    //         // markers: true,
-    //     },
-    //     opacity:0,
-    //     y: -50,
-    //     stagger:0.5,
-    //     ease: 'power3.out',
-    //     duration:1,
-    //     delay:.8,
-    // })
-    // gsap.from('.works .work .g-pro h2' , {
-    //     scrollTrigger:{
-    //         trigger:'.g-pro',
-    //         start: "top 40%",
-    //         // markers: true,
-    //     },
-    //     opacity:0,
-    //     y: -50,
-    //     stagger:0.5,
-    //     ease: 'power3.out',
-    //     duration:1,
-    // })
-    // gsap.from('.works .work .g-pro p' , {
-    //     scrollTrigger:{
-    //         trigger:'.g-pro',
-    //         start: "top 40%",
-    //         // markers: true,
-    //     },
-    //     opacity:0,
-    //     y: -50,
-    //     stagger:0.5,
-    //     ease: 'power3.out',
-    //     duration:1,
-    //     delay:.5,
-    // })
-    // gsap.from('.works .work .g-pro a' , {
-    //     scrollTrigger:{
-    //         trigger:'.g-pro',
-    //         start: "top 40%",
-    //         // markers: true,
-    //     },
-    //     opacity:0,
-    //     y: -50,
-    //     stagger:0.5,
-    //     ease: 'power3.out',
-    //     duration:1,
-    //     delay:.8,
-    // })
-    // gsap.from('.social a' , {
-    //     scrollTrigger:{
-    //         trigger:'footer',
-    //         start: "-40% 80%",
-    //         end:'-20%',
-    //         markers: true,
-    //     },
-    //     // opacity:0,
-    //     y: -50,
-    //     stagger:0.2,
-    //     ease: 'power3',
-    //     duration:.5,
-    //     // delay:.8,
-    // })
+
+
+   
 }
 
 if (document.body.classList.contains('page-video')){
@@ -717,81 +533,10 @@ if (document.body.classList.contains('page-video')){
 
 }
 
-// Get all the cards and the style element
-const cards = document.querySelectorAll(".card");
-const styleElement = document.querySelector(".hover");
 
-cards.forEach(card => {
-  let timeout;
-  
-  card.addEventListener("mousemove", handleMove);
-  card.addEventListener("touchmove", handleMove);
-  card.addEventListener("mouseout", handleEnd);
-  card.addEventListener("touchend", handleEnd);
-  card.addEventListener("touchcancel", handleEnd);
 
-  function handleMove(e) {
-    // Normalize touch/mouse
-    let pos = [e.offsetX, e.offsetY];
-    e.preventDefault();
 
-    if (e.type === "touchmove") {
-      pos = [e.touches[0].clientX, e.touches[0].clientY];
-    }
 
-    // Math for mouse position
-    const cardHeight = card.offsetHeight;
-    const cardWidth = card.offsetWidth;
-    const l = pos[0];
-    const t = pos[1];
-    const px = Math.abs(Math.floor(100 / cardWidth * l) - 100);
-    const py = Math.abs(Math.floor(100 / cardHeight * t) - 100);
-    const pa = (50 - px) + (50 - py);
-
-    // Math for gradient / background positions
-    const lp = 50 + (px - 50) / 1.5;
-    const tp = 50 + (py - 50) / 1.5;
-    const px_spark = 50 + (px - 50) / 7;
-    const py_spark = 50 + (py - 50) / 7;
-    const p_opc = 20 + (Math.abs(pa) * 1.5);
-    const ty = ((tp - 50) / 2) * -1;
-    const tx = ((lp - 50) / 1.5) * 0.5;
-
-    // CSS to apply for active card
-    const gradPos = `background-position: ${lp}% ${tp}%;`;
-    const sprkPos = `background-position: ${px_spark}% ${py_spark}%;`;
-    const opacity = `opacity: ${p_opc / 100};`;
-    const transform = `transform: rotateX(${ty}deg) rotateY(${tx}deg);`;
-
-    // Set style for pseudo-elements
-    const styleContent = `
-      .card:hover:before { ${gradPos} }
-      .card:hover:after { ${sprkPos} ${opacity} }
-    `;
-
-    // Apply styles dynamically
-    styleElement.innerHTML = styleContent;
-    card.style = transform;
-    card.classList.remove("active");
-    card.classList.remove("animated");
-
-    if (e.type === "touchmove") {
-      return false; // Prevent the default behavior for touchmove
-    }
-
-    clearTimeout(timeout);
-  }
-
-  function handleEnd() {
-    // Remove the styles and add animation after a delay
-    card.removeAttribute("style");
-    styleElement.innerHTML = "";
-
-    timeout = setTimeout(() => {
-      card.classList.add("animated");
-    }, 2500);
-  }
-});
 
 
 
