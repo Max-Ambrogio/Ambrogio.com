@@ -8,14 +8,24 @@ window.onload = function () {
 if (document.body.classList.contains('page-home')) {
 
     
-    // gsap.from('.header' , {
-    //     opacity: 0,
-    //     autoAlpha: 0,
-    //     y:80,
-    //     ease: 'power3.out',
-    //     duration:2,
-    //     delay: 0.5,
-    // })
+    const videos = document.querySelectorAll("video")
+    videos.forEach(video => {
+        video.addEventListener("mouseover", function () {
+          this.play()
+        })
+        
+        video.addEventListener("mouseout", function () {
+          this.pause()
+        })
+        
+        video.addEventListener("touchstart", function () {
+          this.play()
+        })
+        
+        video.addEventListener("touchend", function () {
+          this.pause()
+        })
+    })
 
     gsap.from('.header .logo' , {
         opacity: 0,
