@@ -1,9 +1,50 @@
 
 // // create the smooth scroller FIRST!
 
-window.onload = function () {
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    const loadWrapper = document.getElementById("loadWrapper");
 
-}
+    setTimeout(() => {
+        loader.style.transition = "opacity 0.5s ease";
+        loadWrapper.style.transition = "opacity 0.5s ease";
+
+        loader.style.opacity = "0";
+        loadWrapper.style.opacity = "0";
+
+        setTimeout(() => {
+            loader.style.display = "none";
+            loadWrapper.style.display = "none";
+        }, 500); // Matches the transition duration
+
+        gsap.from('.header .logo' , {
+            opacity: 0,
+            autoAlpha: 0,
+            y:-80,
+            ease: 'power3.out',
+            duration:2,
+            delay: 0.8,
+        })
+        gsap.from('.letters' , {
+            opacity: 0,
+            y:60,
+         
+            ease: 'power3.out',
+            duration:2,
+            // delay: .5,
+        })
+        gsap.from('.letters img' , {
+            scale:0,
+            opacity:0,
+            y: 80,
+            ease: 'power3.out',
+            duration:1,
+            // delay: .5,
+            // stagger:.1,
+        })
+
+    }, 3000);
+});
 
 if (document.body.classList.contains('page-home')) {
 
@@ -27,87 +68,15 @@ if (document.body.classList.contains('page-home')) {
         })
     })
 
-    gsap.from('.header .logo' , {
-        opacity: 0,
-        autoAlpha: 0,
-        y:-80,
-        ease: 'power3.out',
-        duration:2,
-        delay: 0.8,
-    })
+    // gsap.from('.header .logo' , {
+    //     opacity: 0,
+    //     autoAlpha: 0,
+    //     y:-80,
+    //     ease: 'power3.out',
+    //     duration:2,
+    //     delay: 0.8,
+    // })
   
-
-    gsap.from('.hero .accent-one' , {
-        opacity: 0,
-        autoAlpha: 0,
-        x:80,
-        ease: 'power3.out',
-        duration:2,
-        delay: 0.5,
-    })
-    gsap.from('.hero .accent-two' , {
-        opacity: 0,
-        autoAlpha: 0,
-        y:-60,
-        ease: 'power3.out',
-        duration:2,
-        delay: 1,
-    })
-    
-    gsap.from('.letters' , {
-        opacity: 0,
-        y:60,
-     
-        ease: 'power3.out',
-        duration:2,
-        delay: 0.1,
-    })
-    gsap.from('.letters img' , {
-        scale:0,
-        opacity:0,
-        y: 80,
-        ease: 'power3.out',
-        duration:1,
-        // stagger:.1,
-    })
-
-    // const trip = gsap.timeline({  repeat: -1,
-    //     repeatDelay: 0.2,
-    //     yoyo: true,});
-
-    // trip.to("#first", {
-    //     duration: 0.5,
-    //     ease: "expo.inOut",
-    //     y:90,
-    // })
-    // trip.to("#second", {
-    //     duration: 0.5,
-    //     ease: "expo.inOut",
-    //     y:-90,
-    // })
-    // trip.to("#third", {
-    //     duration: 0.5,
-    //     ease: "expo.inOut",
-    //     y:90,
-    // })
-    // trip.to("#fourth", {
-    //     duration: 0.5,
-    //     ease: "expo.inOut",
-    //     y:-90,
-    // })
-    // trip.to("#fith", {
-    //     duration: 0.5,
-    //     ease: "expo.inOut",
-    //     y:90,
-    // })
-    // trip.to("#sixth", {
-    //     duration: 0.5,
-    //     ease: "expo.inOut",
-    //     y:-90,
-    // })
-
-
-
     var shiver = 20;
     TweenMax.set(".letters img", {xPercent:-10, yPercent:-10});
     
@@ -189,59 +158,7 @@ if (document.body.classList.contains('page-home')) {
         stagger:1,
     })
 }
-//     gsap.registerPlugin(Observer);
-    
-//     let sections = document.querySelectorAll("section"),
-//       images = document.querySelectorAll(".bg"),
-//       outerWrappers = gsap.utils.toArray(".outer"),
-//       innerWrappers = gsap.utils.toArray(".inner"),
-//       currentIndex = -1,
-//       wrap = gsap.utils.wrap(0, sections.length),
-//       animating;
-    
-//     gsap.set(outerWrappers, { yPercent: 100 });
-//     gsap.set(innerWrappers, { yPercent: -100 });
-    
-//     function gotoSection(index, direction) {
-//       index = wrap(index); // make sure it's valid
-//       animating = true;
-//       let fromTop = direction === -1,
-//           dFactor = fromTop ? -1 : 1,
-//           tl = gsap.timeline({
-//             defaults: { duration: 1.25, ease: "power1.inOut" },
-//             onComplete: () => animating = false
-//           });
-//       if (currentIndex >= 0) {
-//         // The first time this function runs, current is -1
-//         gsap.set(sections[currentIndex], { zIndex: 0 });
-//         tl.to(images[currentIndex], { yPercent: -15 * dFactor })
-//           .set(sections[currentIndex], { autoAlpha: 0 });
-//       }
-//       gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
-//       tl.fromTo([outerWrappers[index], innerWrappers[index]], { 
-//           yPercent: i => i ? -100 * dFactor : 100 * dFactor
-//         }, { 
-//           yPercent: 0 
-//         }, 0)
-//         .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
-        
-//       currentIndex = index;
-//     }
-    
-//     Observer.create({
-//       type: "wheel,touch,pointer",
-//       wheelSpeed: -1,
-//       onDown: () => !animating && gotoSection(currentIndex - 1, -1),
-//       onUp: () => !animating && gotoSection(currentIndex + 1, 1),
-//       tolerance: 10,
-//       preventDefault: true
-//     });
-    
-//     gotoSection(0, 1);
-    
-//     // original: https://codepen.io/BrianCross/pen/PoWapLP
-//     // horizontal version: https://codepen.io/GreenSock/pen/xxWdeMK
-// }
+
 
 
 
