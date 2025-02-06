@@ -44,6 +44,61 @@ window.addEventListener("load", () => {
         })
 
     }, 3000);
+    var cards = document.querySelectorAll('.card')
+      
+    const cursorCont = document.querySelector(".cursor-container")
+    const cursor = document.querySelector(".cursor")
+    const root = document.documentElement;
+    
+    document.addEventListener("mousemove", (event) => {
+          x = event.pageX
+        y = event.pageY
+      
+        cursorCont.style.transform = `translate(${x}px,${y}px) scale(1)`
+    })
+    
+    //hover
+    var cardInner = document.querySelectorAll('.card .inner-shadow')
+    var cardCursorWrapper = document.querySelectorAll('.card .cursor-blur-wrapper')
+    var cardCursor = document.querySelectorAll('.card .cursor-blur')
+    
+    window.addEventListener("mousemove", (event) => {
+        cards.forEach((item, i) => {
+          const rect = item.getBoundingClientRect();
+        let x = event.clientX - rect.left;
+        let y = event.clientY - rect.top;
+        let count = 0;
+        
+        if (x < 0) {
+            x = 0
+          translate()
+        } else if (x > rect.width) {
+            x = rect.width
+          translate()
+        }
+        if (y < 0) {
+            y = 0
+          translate()
+        } else if (y > rect.height) {
+            y = rect.height
+          translate()
+        }
+        function translate() {
+            cardCursorWrapper[i].style.transform = `translate(${x}px,${y}px)`
+        }
+        
+        item.onmouseover = function(){
+          cursor.style.backgroundColor = `var(--animate${i + 1})`
+          cardCursor[i].style.backgroundColor = `var(--animate${i + 1})`
+          cardInner[i].style.color = `var(--animate${i + 1})`
+        };
+        item.onmouseout = function(){
+          cursor.style.backgroundColor = 'var(--initial)'
+          cardCursor[i].style.backgroundColor = 'var(--initial)'
+          cardInner[i].style.color = 'var(--initial)'
+        };  
+      })
+    });
 });
 
 if (document.body.classList.contains('page-home')) {
@@ -90,120 +145,66 @@ if (document.body.classList.contains('page-home')) {
       return Math.random() * (max - min) + min;
     }
 
-    gsap.to('.scramble',{
-        duration:2,
-        autoAlpha: 0,
-        scrambleText:{
-            delimiter:"",
-            revealDelay:0.9,
-            chars:"01",
-            speed:0.1,
-            // tweenLength: true,
-            text: "{original}",
-        }
-    })
-    gsap.to('.scramble-two',{
-        // delay:1,
-        duration:4,
-        autoAlpha: 0,
-        scrambleText:{
-            chars:"01",
-            revealDelay:0.7,
-            speed:1,
-            tweenLength: false,
-            text: "{original}",
-        }
-    })
-    gsap.to('.scarmble-three',{
-        // delay:1,
-        duration:6,
-        // autoAlpha: 0,
-        scrambleText:{
-            chars:"01",
-            revealDelay:0.9,
-            speed:1,
-            tweenLength: false,
-            text: "{original}",
-        }
-    })
-    gsap.to('.scramble-four',{
-        // delay:1,
-        duration:12,
-        // autoAlpha: 0,
-        scrambleText:{
-            chars:"01",
-            revealDelay:0.7,
-            speed:1,
-            tweenLength: false,
-            text: "{original}",
-        }
-    })
-    gsap.from('.about p',{
-        delay:0.5,
-        autoAlpha: 0,
-        opacity:0,
-        scrollTrigger: ".about",
-        y:-50,
-        ease: 'power3.out',
-        duration:3,
-        stagger:1,
-    })
+    // gsap.to('.scramble',{
+    //     duration:2,
+    //     autoAlpha: 0,
+    //     scrambleText:{
+    //         delimiter:"",
+    //         revealDelay:0.9,
+    //         chars:"01",
+    //         speed:0.1,
+    //         // tweenLength: true,
+    //         text: "{original}",
+    //     }
+    // })
+    // gsap.to('.scramble-two',{
+    //     // delay:1,
+    //     duration:4,
+    //     autoAlpha: 0,
+    //     scrambleText:{
+    //         chars:"01",
+    //         revealDelay:0.7,
+    //         speed:1,
+    //         tweenLength: false,
+    //         text: "{original}",
+    //     }
+    // })
+    // gsap.to('.scarmble-three',{
+    //     // delay:1,
+    //     duration:6,
+    //     // autoAlpha: 0,
+    //     scrambleText:{
+    //         chars:"01",
+    //         revealDelay:0.9,
+    //         speed:1,
+    //         tweenLength: false,
+    //         text: "{original}",
+    //     }
+    // })
+    // gsap.to('.scramble-four',{
+    //     // delay:1,
+    //     duration:12,
+    //     // autoAlpha: 0,
+    //     scrambleText:{
+    //         chars:"01",
+    //         revealDelay:0.7,
+    //         speed:1,
+    //         tweenLength: false,
+    //         text: "{original}",
+    //     }
+    // })
+    // gsap.from('.about p',{
+    //     delay:0.5,
+    //     autoAlpha: 0,
+    //     opacity:0,
+    //     scrollTrigger: ".about",
+    //     y:-50,
+    //     ease: 'power3.out',
+    //     duration:3,
+    //     stagger:1,
+    // })
       
-      var cards = document.querySelectorAll('.card')
-      
-      const cursorCont = document.querySelector(".cursor-container")
-      const cursor = document.querySelector(".cursor")
-      const root = document.documentElement;
-      
-      document.addEventListener("mousemove", (event) => {
-            x = event.pageX
-          y = event.pageY
-        
-          cursorCont.style.transform = `translate(${x}px,${y}px) scale(1)`
-      })
-      
-      //hover
-      var cardInner = document.querySelectorAll('.card .inner-shadow')
-      var cardCursorWrapper = document.querySelectorAll('.card .cursor-blur-wrapper')
-      var cardCursor = document.querySelectorAll('.card .cursor-blur')
-      
-      window.addEventListener("mousemove", (event) => {
-          cards.forEach((item, i) => {
-            const rect = item.getBoundingClientRect();
-          let x = event.clientX - rect.left;
-          let y = event.clientY - rect.top;
-          let count = 0;
-          
-          if (x < 0) {
-              x = 0
-            translate()
-          } else if (x > rect.width) {
-              x = rect.width
-            translate()
-          }
-          if (y < 0) {
-              y = 0
-            translate()
-          } else if (y > rect.height) {
-              y = rect.height
-            translate()
-          }
-          function translate() {
-              cardCursorWrapper[i].style.transform = `translate(${x}px,${y}px)`
-          }
-          
-          item.onmouseover = function(){
-            cursor.style.backgroundColor = `var(--animate${i + 1})`
-            cardCursor[i].style.backgroundColor = `var(--animate${i + 1})`
-            cardInner[i].style.color = `var(--animate${i + 1})`
-          };
-          item.onmouseout = function(){
-            cursor.style.backgroundColor = 'var(--initial)'
-            cardCursor[i].style.backgroundColor = 'var(--initial)'
-            cardInner[i].style.color = 'var(--initial)'
-          };  
-        })
-      });
+     
 
 }
 
