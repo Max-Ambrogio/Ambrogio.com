@@ -206,12 +206,19 @@ canvas {
 }
 
 .cursor {
-  min-width: 8px;
-  min-height: 8px;
+  min-width: 10px;
+  min-height: 10px;
   background-color: var(--initial);
   border-radius: 50%;
-  transition: 0.4s;
+  transition: 0.4s ease-in-out;
+  
 }
+
+.cursor  .content-right:hover{
+  min-width: 16px;
+  min-height: 16px;
+}
+
 
 body {
   height: 100vh;
@@ -874,10 +881,10 @@ p {
   width:  -webkit-fill-available !important;
 }
  .content-work .cat-gif{
-  background-image: url(/dist/gif/cat-gif.gif);
+  background-image: url(/dist/gif/gengar.gif);
   animation: scrollRight 60s linear infinite;
   background-position: center;
-  background-size: contain;
+  background-size: 10%;
   width: 400%;
   z-index: 2;
   height: 100%;
@@ -982,6 +989,21 @@ p {
     border: 2px solid black;
     border-left: none;
     border-right: none;
+    
+}
+.animation .content-work .gengar{
+    background-image: url(/dist/gif/slowbro.gif);
+    animation: scroll 60s linear infinite;
+    background-position: center;
+    background-size: contain;
+    width: 400%;
+    z-index: 2;
+    height: 100%;
+    transform: scale(1 , -1);
+}
+
+.animation .scroll p{
+  animation: scrollRight 60s linear infinite !important;
 }
 
 /* video-production */
@@ -1034,6 +1056,16 @@ p {
     border-left: none;
     border-right: none;
 }
+.videoproduction .content-work .bart{
+  background-image: url(/dist/gif/Bart.gif);
+  animation: scrollRight 30s linear infinite;
+  background-position: center;
+  background-size: contain;
+  width: 400%;
+  z-index: 2;
+  height: 100%;
+  transform: scale(1 , -1);
+}
 .videoproduction .scroll{
     grid-column: 5 / 9 !important;
     grid-row: 3 / 4 ;
@@ -1077,9 +1109,19 @@ p {
   border-left: none;
   border-right: none;
 }
+.doom{
+  background-image: url(/dist/gif/gengar.gif);
+  animation: scrollRight 60s linear infinite;
+  background-position: center;
+  background-size: contain;
+  width: 400%;
+  z-index: 2;
+  height: 100%;
+  transform: scale(1 , -1);
+}
 .creative-technology .one p{
-  font-size:2.5vw;
-  line-height: 20px;
+  font-size: 1.8vw;
+  line-height: 23px;
 }
 .creative-technology .two{
 border-top: none;
@@ -1087,8 +1129,11 @@ border-top: none;
   grid-row: 1 / 4 ;
   border: 2px solid black;
   border-top: none;
-  /* border-left: none; */
-  /* border-bottom: none; */
+  background: url(/dist/gif/car-test\ 2.gif);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(-1, 1);
 }
 .creative-technology .content-work{
   grid-column: 3 / 7;
@@ -1142,11 +1187,11 @@ border-top: none;
 }
 .about-me .content-left p{
   text-decoration: none;
-  font-size: 3vw;
+  font-size: 2.8vw;
   color: rgb(0, 0, 0);
   font-family: "Jersey 10", serif;
   font-weight: 400;
-  line-height: 35px;
+  line-height: 40px;
   letter-spacing: .1px;
 }
 
@@ -2286,3 +2331,19 @@ footer .social a:hover {
   height: 80vh;
   width: fit-content;
 }
+
+@keyframes scroll{
+  from{
+    transform: translateX(0);
+  }to{
+    transform: translateX(-50%);
+  }
+}
+@keyframes scrollRight{
+  from{
+    transform: translateX(-50%);
+  }to{
+    transform: translateX(0%);
+  }
+}
+
