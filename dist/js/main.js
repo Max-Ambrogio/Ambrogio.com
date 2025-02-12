@@ -49,6 +49,7 @@ window.addEventListener("load", () => {
     const cursorCont = document.querySelector(".cursor-container")
     const cursor = document.querySelector(".cursor")
     const root = document.documentElement;
+    const rightContent = document.querySelectorAll(".content-right")
     
     document.addEventListener("mousemove", (event) => {
           x = event.pageX
@@ -61,6 +62,25 @@ window.addEventListener("load", () => {
     var cardInner = document.querySelectorAll('.card .inner-shadow')
     var cardCursorWrapper = document.querySelectorAll('.card .cursor-blur-wrapper')
     var cardCursor = document.querySelectorAll('.card .cursor-blur')
+
+    window.addEventListener('mousemove' , (event) =>{
+        rightContent.forEach((item, i) => {
+
+            item.onmouseover = function(){
+                cursor.style.minWidth = "128px"
+                cursor.style.minHeight = "128px"
+                cursor.style.backdropFilter  = 'invert(1)' 
+                cursor.style.backgroundColor = 'white'
+              };
+              item.onmouseout = function(){
+                cursor.style.minWidth = "10px"
+                cursor.style.minHeight = "10px"
+                cursor.style.backgroundColor = 'var(--initial)'
+                cursor.style.backdropFilter  = 'invert(0)' 
+              };  
+        })
+
+    })
     
     window.addEventListener("mousemove", (event) => {
         cards.forEach((item, i) => {
@@ -91,6 +111,7 @@ window.addEventListener("load", () => {
           cursor.style.backgroundColor = `var(--animate${i + 1})`
           cardCursor[i].style.backgroundColor = `var(--animate${i + 1})`
           cardInner[i].style.color = `var(--animate${i + 1})`
+
         };
         item.onmouseout = function(){
           cursor.style.backgroundColor = 'var(--initial)'

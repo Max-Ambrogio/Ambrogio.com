@@ -210,14 +210,18 @@ canvas {
   min-height: 10px;
   background-color: var(--initial);
   border-radius: 50%;
-  transition: 0.4s ease-in-out;
-  
+  backdrop-filter: invert(0);
+  transition: 0.4s ease-in-out, background-color 0.3s;
 }
 
-.cursor  .content-right:hover{
-  min-width: 16px;
-  min-height: 16px;
+/* When the cursor is over .content-right */
+.content-right:hover ~ .cursor-container .cursor {
+  min-width: 36px !important;
+  min-height: 36px !important;
+  background-color: var(--inverted); /* Invert the background color */
 }
+
+
 
 
 body {
@@ -958,6 +962,11 @@ p {
     border-top: none;
     border-bottom: none;
     z-index: 4;
+    position: relative;
+}
+
+.animation .content-right video{
+ 
 }
 .animation h2{
     grid-column: 1 / 5;
