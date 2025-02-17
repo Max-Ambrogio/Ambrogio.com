@@ -166,64 +166,29 @@ if (document.body.classList.contains('page-home')) {
       return Math.random() * (max - min) + min;
     }
 
-    // gsap.to('.scramble',{
-    //     duration:2,
-    //     autoAlpha: 0,
-    //     scrambleText:{
-    //         delimiter:"",
-    //         revealDelay:0.9,
-    //         chars:"01",
-    //         speed:0.1,
-    //         // tweenLength: true,
-    //         text: "{original}",
-    //     }
-    // })
-    // gsap.to('.scramble-two',{
-    //     // delay:1,
-    //     duration:4,
-    //     autoAlpha: 0,
-    //     scrambleText:{
-    //         chars:"01",
-    //         revealDelay:0.7,
-    //         speed:1,
-    //         tweenLength: false,
-    //         text: "{original}",
-    //     }
-    // })
-    // gsap.to('.scarmble-three',{
-    //     // delay:1,
-    //     duration:6,
-    //     // autoAlpha: 0,
-    //     scrambleText:{
-    //         chars:"01",
-    //         revealDelay:0.9,
-    //         speed:1,
-    //         tweenLength: false,
-    //         text: "{original}",
-    //     }
-    // })
-    // gsap.to('.scramble-four',{
-    //     // delay:1,
-    //     duration:12,
-    //     // autoAlpha: 0,
-    //     scrambleText:{
-    //         chars:"01",
-    //         revealDelay:0.7,
-    //         speed:1,
-    //         tweenLength: false,
-    //         text: "{original}",
-    //     }
-    // })
-    // gsap.from('.about p',{
-    //     delay:0.5,
-    //     autoAlpha: 0,
-    //     opacity:0,
-    //     scrollTrigger: ".about",
-    //     y:-50,
-    //     ease: 'power3.out',
-    //     duration:3,
-    //     stagger:1,
-    // })
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function handleScroll() {
+        const svgs = document.querySelectorAll('.svg');
+        const scrollDiff = window.scrollY - lastScrollY;
+        
+        svgs.forEach((svg, index) => {
+            let moveX = window.scrollY * 0.5 + index * 15;
+            let rotate = window.scrollY * 0.5;
+            svg.style.transform = `translateX(${moveX}px) rotate(${rotate}deg)`;
+        });
+        
+        lastScrollY = window.scrollY;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            requestAnimationFrame(handleScroll);
+            ticking = true;
+        }
+    });
       
      
 
