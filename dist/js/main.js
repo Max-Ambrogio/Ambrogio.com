@@ -199,7 +199,7 @@ if (document.body.classList.contains('page-home')) {
             start: "top 50%",
             end:"bottom 10%",
             scrub: true,
-            markers: true,
+            // markers: true,
         },
     });
     const svgOne = gsap.timeline({
