@@ -70,7 +70,7 @@ window.addEventListener("load", () => {
                 cursor.style.minWidth = "128px"
                 cursor.style.minHeight = "128px"
                 cursor.style.backdropFilter  = 'invert(1)' 
-                cursor.style.backgroundColor = 'white'
+                cursor.style.backgroundColor = 'rgba(0, 0, 0, 0)'
               };
               item.onmouseout = function(){
                 cursor.style.minWidth = "10px"
@@ -189,7 +189,52 @@ if (document.body.classList.contains('page-home')) {
             ticking = true;
         }
     });
-      
+
+
+
+
+    const svgEye = gsap.timeline({
+        scrollTrigger:{
+            trigger:'.accent-one',
+            start: "top 50%",
+            end:"bottom 10%",
+            scrub: true,
+            markers: true,
+        },
+    });
+    const svgOne = gsap.timeline({
+        scrollTrigger:{
+            trigger:'.accent-one',
+            start: "top 50%",
+            end:"bottom 10%",
+            scrub: true,
+            // markers: true,
+        },
+    });
+    const svgTwo = gsap.timeline({
+        scrollTrigger:{
+            trigger:'.accent-one',
+            start: "top 50%",
+            end:"bottom 10%",
+            scrub: true,
+            // markers: true,
+        },
+    });
+    svgEye.to(".svg-eye ",{
+        scale: 1.2,
+        rotation: 0,
+        ease:"power3.out",
+    })
+    svgOne.to(".svg-one",{
+        scale: 1.2,
+        rotation: 3,
+        ease:"power3.out",
+    })
+    svgTwo.to(".svg-one ",{
+        scale: 1.2,
+        rotation: 0,
+        ease:"power3.out",
+    })
      
 
 }
