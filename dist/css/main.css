@@ -710,6 +710,15 @@ main {
   background-size: cover;
 }
 
+.social-posts{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
 .webdevelopment h2{
   text-shadow: 2px 2px 0px #B64195;
 }
@@ -1126,6 +1135,11 @@ footer{
 
     .animation .content-work{
       grid-row: 4 / 5;
+    }
+
+    .social-posts iframe{
+      min-width: 100px !important ;
+      width: auto !important;
     }
 
     .videoproduction .content-right{
