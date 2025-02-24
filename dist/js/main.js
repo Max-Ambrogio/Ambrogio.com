@@ -43,6 +43,207 @@ window.addEventListener("load", () => {
             // stagger:.1,
         })
 
+        gsap.from(".eye-svg ",{
+            scale: 1.2,
+            rotation: 0,
+            ease:"power3.out",
+        })
+        gsap.from(".svg-two",{
+            scale: 1.2,
+            rotation: 3,
+            ease:"power3.out",
+        })
+        gsap.from(".svg-three ",{
+            scale: 1.2,
+            rotation: 0,
+            ease:"power3.out",
+        })
+
+        gsap.from('.webdevelopment h2' , {
+            scrollTrigger:{
+                trigger:'.webdevelopment',
+                start: "5% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            // delay:.8,
+        })
+        gsap.from('.webdevelopment .content-left p' , {
+            scrollTrigger:{
+                trigger:'.webdevelopment',
+                start: "20% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            delay:.8,
+        })
+        gsap.from('.webdevelopment .one p' , {
+            scrollTrigger:{
+                trigger:'.webdevelopment',
+                start: "40% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            delay:.8,
+        })
+        gsap.from('.animation h2' , {
+            scrollTrigger:{
+                trigger:'.animation',
+                start: "5% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            // delay:.8,
+        })
+        gsap.from('.animation .content-left p' , {
+            scrollTrigger:{
+                trigger:'.animation',
+                start: "20% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            delay:.8,
+        })
+        gsap.from('.animation .one p' , {
+            scrollTrigger:{
+                trigger:'.animation',
+                start: "40% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            delay:.8,
+        })
+        gsap.from('.videoproduction h2' , {
+            scrollTrigger:{
+                trigger:'.videoproduction',
+                start: "5% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            // delay:.8,
+        })
+        gsap.from('.videoproduction .content-left p' , {
+            scrollTrigger:{
+                trigger:'.videoproduction',
+                start: "20% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            delay:.8,
+        })
+        gsap.from('.videoproduction .one p' , {
+            scrollTrigger:{
+                trigger:'.videoproduction',
+                start: "40% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            delay:.8,
+        })
+        gsap.from('.creative-technology h2' , {
+            scrollTrigger:{
+                trigger:'.creative-technology',
+                start: "5% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            // delay:.8,
+        })
+        gsap.from('.creative-technology .content-left p' , {
+            scrollTrigger:{
+                trigger:'.creative-technology',
+                start: "20% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            delay:.8,
+        })
+        gsap.from('.creative-technology .one p' , {
+            scrollTrigger:{
+                trigger:'.creative-technology',
+                start: "40% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            delay:.8,
+        })
+        gsap.from('.about-me h2' , {
+            scrollTrigger:{
+                trigger:'.about-me',
+                start: "10% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            delay:.8,
+        })
+        gsap.from('.about-me .about' , {
+            scrollTrigger:{
+                trigger:'.about-me',
+                start: "20% 80%",
+                // markers: true,
+            },
+            opacity:0,
+            y: -50,
+            stagger:0.2,
+            ease: 'power3',
+            duration:1,
+            delay:.8,
+        })
+
+
+
     }, 3000);
     var cards = document.querySelectorAll('.card')
       
@@ -191,51 +392,6 @@ if (document.body.classList.contains('page-home')) {
     });
 
 
-
-
-    const svgEye = gsap.timeline({
-        scrollTrigger:{
-            trigger:'.accent-one',
-            start: "top 50%",
-            end:"bottom 10%",
-            scrub: true,
-            // markers: true,
-        },
-    });
-    const svgOne = gsap.timeline({
-        scrollTrigger:{
-            trigger:'.accent-one',
-            start: "top 50%",
-            end:"bottom 10%",
-            scrub: true,
-            // markers: true,
-        },
-    });
-    const svgTwo = gsap.timeline({
-        scrollTrigger:{
-            trigger:'.accent-one',
-            start: "top 50%",
-            end:"bottom 10%",
-            scrub: true,
-            // markers: true,
-        },
-    });
-    svgEye.to(".svg-eye ",{
-        scale: 1.2,
-        rotation: 0,
-        ease:"power3.out",
-    })
-    svgOne.to(".svg-one",{
-        scale: 1.2,
-        rotation: 3,
-        ease:"power3.out",
-    })
-    svgTwo.to(".svg-one ",{
-        scale: 1.2,
-        rotation: 0,
-        ease:"power3.out",
-    })
-     
 
 }
 

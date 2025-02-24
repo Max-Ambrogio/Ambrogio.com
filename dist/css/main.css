@@ -626,6 +626,11 @@ main {
   grid-row: 2 / 3 ;
   align-content: center;
   border-top: 2px solid black;
+  overflow: hidden;
+}
+
+.content-accent{
+  overflow: hidden;
 }
  .slide-content{
   text-decoration: none;
@@ -1061,6 +1066,26 @@ footer{
 
   .letters{
     gap: 5px;
+    justify-content: center;
+  }
+
+  .letters img{
+    width: 8%;
+  }
+
+  .firstname{
+    grid-column: 1 / 9;
+  }
+
+  .lastname{
+    grid-column: 1 / 9;
+  }
+
+  .ct-start{
+    grid-column: 1 / 9;
+  }
+  .ct-end{
+    grid-column: 1 / 9;
   }
 
   .intro .inner-container h2{
@@ -1124,6 +1149,21 @@ footer{
       grid-column: 1 / 3 !important;
     }
 
+    .svg-wrapper{
+      align-items: center !important;
+    }
+
+    .animation .three{
+      display: none;
+    }
+    .animation .two{
+      display: none;
+    }
+
+    .animation .scroll{
+      border-bottom:2px solid black;
+    }
+
     .creative-technology .three{
       border-left: none;
     }
@@ -1170,6 +1210,7 @@ footer{
     .creative-technology .content-work{
       grid-column: 1 / 3 !important;
       grid-row: 4 / 5 ;
+      display: none;
     }
     
     .creative-technology .scroll{
