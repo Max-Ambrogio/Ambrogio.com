@@ -170,7 +170,7 @@ canvas {
 
 * {
   box-sizing: border-box;
-  cursor: none!important;
+  /* cursor: none!important; */
   text-rendering: geometricPrecision;
   margin: 0;
   padding: 0;
