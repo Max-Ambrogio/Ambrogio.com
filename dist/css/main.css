@@ -271,7 +271,6 @@ body {
   width: 9%;
 }
 .header .logo img:hover {
-  filter:hue-rotate(60deg) drop-shadow(0 0 0.75rem #ff00f2);
   transform: scale(1.2);
 }
 .header .logo .home {
