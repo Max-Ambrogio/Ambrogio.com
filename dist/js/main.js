@@ -662,7 +662,7 @@ if (document.body.classList.contains('page-webdev')){
    
 }
 
-if (document.body.classList.contains('page-video')){
+if (document.body.classList.contains('.page-video')){
     gsap.from('.bp-media div' , {
         scrollTrigger:{
             trigger:'bear-paw',
@@ -689,21 +689,23 @@ if (document.body.classList.contains('page-video')){
         duration:1,
         // delay:.8,
     })
+
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
