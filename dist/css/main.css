@@ -1609,7 +1609,7 @@ footer .social a:hover {
 }
 .works .work .copy {
   padding: 40px 0px 0px 0px;
-  margin-bottom: 350px;
+  margin-bottom: 450px;
 }
 @media screen and (min-width: 768px) {
   .works .work .copy {
@@ -1657,9 +1657,9 @@ footer .social a:hover {
   z-index: 0;
   background-image: url("/dist/img/desktop-anywair.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .any-one {
-    top: 30%;
+    top: 120%;
     right: 20%;
   }
 }
@@ -1669,11 +1669,10 @@ footer .social a:hover {
   z-index: 0;
   background-image: url("/dist/img/mobile-anywair.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .any-two {
-    width: 25%;
-    height: 500px;
-    top: 10%;
+    top: 120%;
+    right: 10%;
   }
 }
 .works .work .juve-one {
@@ -1682,10 +1681,10 @@ footer .social a:hover {
   z-index: 0;
   background-image: url("/dist/img/averygoodbaker-desktop.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .juve-one {
-    top: 30%;
-    right: 20%;
+    top: 120%;
+    right: 10%;
   }
 }
 .works .work .juve-two {
@@ -1696,11 +1695,10 @@ footer .social a:hover {
   z-index: 1;
   background-image: url("/dist/img/avery-mobile.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .juve-two {
-    width: 25%;
-    height: 500px;
-    top: 10%;
+    top: 120%;
+    right: 20%;
   }
 }
 .works .work .truly-one {
@@ -1709,10 +1707,10 @@ footer .social a:hover {
   z-index: 0;
   background-image: url("/dist/img/bdr-desktop.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .truly-one {
-    top: 30%;
-    right: 20%;
+    top: 120%;
+    right: 10%;
   }
 }
 .works .work .truly-two {
@@ -1723,11 +1721,10 @@ footer .social a:hover {
   rotate: 5deg;
   background-image: url("/dist/img/bdr-mobile.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .truly-two {
-    width: 25%;
-    height: 500px;
-    top: 10%;
+    top: 120%;
+    right: 20%;
   }
 }
 .works .work .gpro-one {
@@ -1736,10 +1733,10 @@ footer .social a:hover {
   z-index: 0;
   background-image: url("/dist/img/gpro-desktop.jpg");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .gpro-one {
-    top: 30%;
-    right: 20%;
+    top: 120%;
+    right: 10%;
   }
 }
 .works .work .gpro-two {
@@ -1750,11 +1747,10 @@ footer .social a:hover {
   rotate: 5deg;
   background-image: url("/dist/img/gpro-mobile.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .gpro-two {
-    width: 25%;
-    height: 500px;
-    top: 10%;
+    top: 120%;
+    right: 20%;
   }
 }
 .works .work .k_d-one {
@@ -1765,11 +1761,10 @@ footer .social a:hover {
   background-image: url("/dist/img/k-d.PNG");
   width: 70%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .k_d-one {
-    width: 50%;
-    height: 500px;
-    top: 10%;
+    top: 120%;
+    right: 10%;
   }
 }
 .works .work .poke-one {
@@ -1778,9 +1773,9 @@ footer .social a:hover {
   z-index: 0;
   background-image: url("/dist/img/1ffc-desktop.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .poke-one {
-    top: 30%;
+    top: 120%;
     right: 20%;
   }
 }
@@ -1792,11 +1787,10 @@ footer .social a:hover {
   rotate: 5deg;
   background-image: url("/dist/img/1ffc-mobile.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .poke-two {
-    width: 25%;
-    height: 500px;
-    top: 10%;
+    top: 120%;
+    right: 10%;
   }
 }
 .works .work .olea-one {
@@ -1805,10 +1799,10 @@ footer .social a:hover {
   z-index: 0;
   background-image: url("/dist/img/olea-desktop.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .olea-one {
-    top: 30%;
-    right: 20%;
+    top: 120%;
+    right: 10%;
   }
 }
 .works .work .olea-two {
@@ -1819,11 +1813,10 @@ footer .social a:hover {
   rotate: 5deg;
   background-image: url("/dist/img/olea-mobile.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .olea-two {
-    width: 25%;
-    height: 500px;
-    top: 10%;
+    top: 120%;
+    right: 10%;
   }
 }
 .works .work .pallas-one {
@@ -1832,9 +1825,9 @@ footer .social a:hover {
   z-index: 0;
   background-image: url("/dist/img/pallas-desktop.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .pallas-one {
-    top: 30%;
+    top: 120%;
     right: 20%;
   }
 }
@@ -1846,11 +1839,10 @@ footer .social a:hover {
   rotate: 5deg;
   background-image: url("/dist/img/pallas-mobile.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .pallas-two {
-    width: 25%;
-    height: 500px;
-    top: 10%;
+    top: 120%;
+    right: 10%;
   }
 }
 .works .work .trivia-one {
@@ -1859,9 +1851,9 @@ footer .social a:hover {
   z-index: 0;
   background-image: url("/dist/img/nclp-desktop.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .trivia-one {
-    top: 30%;
+    top: 120%;
     right: 20%;
   }
 }
@@ -1873,11 +1865,10 @@ footer .social a:hover {
   rotate: 5deg;
   background-image: url("/dist/img/nclp-mobile.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .trivia-two {
-    width: 25%;
-    height: 500px;
-    top: 10%;
+    top: 120%;
+    right: 10%;
   }
 }
 .works .work .assassins-one {
@@ -1886,9 +1877,9 @@ footer .social a:hover {
   z-index: 0;
   background-image: url("/dist/img/dvmc-desktop.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .assassins-one {
-    top: 30%;
+    top: 120%;
     right: 20%;
   }
 }
@@ -1900,11 +1891,10 @@ footer .social a:hover {
   rotate: 5deg;
   background-image: url("/dist/img/dvmc-mobile.png");
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .works .work .assassins-two {
-    width: 25%;
-    height: 500px;
-    top: 10%;
+    top: 120%;
+    right: 10%;
   }
 }
 

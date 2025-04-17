@@ -657,6 +657,46 @@ if (document.body.classList.contains('page-webdev')){
         rotation: -3,
         ease:"power3.out",
     })
+    const anyOne = gsap.timeline({
+        scrollTrigger:{
+            trigger:'.any',
+            start: "top 90%",
+            end:"bottom 60%",
+            scrub: true,
+            // markers: true,
+        },
+    });
+    const anyTwo = gsap.timeline({
+        scrollTrigger:{
+            trigger:'.anywair',
+            start: "top 90%",
+            end:"bottom 90%",
+            scrub: true,
+            // markers: true,
+        },
+    });
+    anyOne.to(".any-one ",{
+        y:50,
+        rotation: 0,
+        ease:"power3.out",
+    })
+    anyOne.to(".any-one",{
+        y:-60,
+        rotation: 3,
+        ease:"power3.out",
+    })
+    anyTwo.to(".any-two ",{
+        x:0,
+        y:100,
+        rotation: 0,
+        ease:"power3.out",
+    })
+    anyTwo.to(".any-two",{
+        x:-10,
+        y:-60,
+        rotation: -3,
+        ease:"power3.out",
+    })
 
 
    
