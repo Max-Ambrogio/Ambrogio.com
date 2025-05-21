@@ -11,125 +11,93 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">	
 		<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="dist/css/main.css" />
+		<link rel="stylesheet" href="dist/css/noy.css" />
 	</head>
 
-	<body class="page-video">
-		<div class="noise"></div>
-		<header class="header">
-			<div class="logo">
-			  <a href="./index.html">
-				<img src="./dist/gif/intro.gif" alt="max logo">
-			  </a>
-			</div>
-			
-			<nav class="navigation">
-			  
-			  <input type="checkbox" class="toggle-menu">
-			  <div class="hamburger"></div>
-			  
-			  <ul class="menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./webdev.html">Web Dev</a></li>
-          <li><a href="./3DRender.html">3D Renders</a></li>
-          <li><a href="./video-production.html">Video Production</a></li>
-          <li><a href="./photo.html">Photography</a></li>
-          <li><a href="./creative-tech.html">Creative Technology</a></li>
-			  </ul>
-			</nav>
-		  </header>
-      <body>
-
-      <div class="portfolio-grid">
-        <h2>Graphic Design
-          <br>
-          Everything here I designed in Photoshop and Ilustrator. Web design was done in Figma.
-        </h2>
-        <div class="gallery-port" id="graphic-design">
-          <div class="item large"><video mute controls src="./dist/video/INFOGRAPHIC madison.mp4"></video></div>
-          <div class="item "><img src="./dist/img/desktop.png"></div>
-          <div class="item "><img src="./dist/img/juventus-desktop-home.png"></div>
-          <div class="item "><img src="./dist/img/gpro-desktop.png"></div>
-          <div class="item "><img src="./dist/img/aurelle-brandbook_Page_1.png"></div>
-          <div class="item "><img src="./dist/img/aurelle-brandbook_Page_2.png"></div>
-          <div class="item "><img src="./dist/img/aurelle-brandbook_Page_3.png"></div>
-          <div class="item "><img src="./dist/img/aurelle-brandbook_Page_4.png"></div>
-          <div class="item "><img src="./dist/img/aurelle-brandbook_Page_5.png"></div>
-
-        </div>
-        <h2>Animation + Video Editing
-                    <br>
-          Combination of Animation mixed with video. Edited in After Effects and Premiere Pro.
-        </h2>
-        <div class="gallery-port" id="animation">
-          <div class="item large"><video mute controls src="./dist/video/BicarFoodV5.mp4"></video></div>
-          <div class="item large"><video mute controls src="./dist/video/CARECREDIT-SHORT01.mp4"></video></div>
-          <div class="item"><video mute controls src="./dist/video/Barbie-bbm-V1.mp4"></video></div> 
-          <div class="item"><video mute controls src="./dist/video/BBM National Email Week_Animation-vertical.mp4"></video></div> 
-          <div class="item large"><video mute controls src="./dist/video/infused water animation.mp4"></video></div>
-          <div class="item large"><video mute controls src="./dist/video/motion-graphics-reel.mp4"></video></div> 
-        </div>
-
-        <h2>Video Editing
-          <br>
-            Videos were edited in Premiere Pro and After Effects. More on the main <a class="link" href="video-production.html">videoproduction page</a> 
-        </h2>
-        <div class="gallery-port" id="video-editing">
-          <div class="item extra-large"><video mute controls src="./dist/video/Kaiju-V3.mp4"></video></div>
-    
-          <div class="item large"><video mute controls src="./dist/video/video-reel.mp4"></video></div>
-        </div>
-
-        <h2>Photography
-          <br>
-          Mix of portraits and events I have shot and edited.
-        </h2>
-        <div class="gallery-port" id="photography">
-          <div class="item"><img src="./dist/img/trackstar (7).jpg"></div>
-          <div class="item"><img src="./dist/img/Captains-cup-22.jpg"></div>
-          <div class="item"><img src="./dist/img/trackstar (19).jpg"></div>
-          <div class="item"><img src="./dist/img/Captains-cup-33.jpg"></div>
-          <div class="item"><img src="./dist/img/Austin.wav-15.png"></div>
-          <div class="item"><img src="./dist/img/MAX09242.JPG"></div>
-          <div class="item"><img src="./dist/img/DSC01489.jpg"></div>
-          <div class="item"><img src="./dist/img/MAX09431.JPG"></div>
-          <div class="item large"><img src="./dist/img/avery-62.jpg"></div>
-          <div class="item"><img src="./dist/img/DSC01557.jpg"></div>
-          <div class="item"><img src="./dist/img/MAX09505.JPG"></div>
-          <div class="item"><img src="./dist/img/MAX09260.JPG"></div>
-          <div class="item"><img src="./dist/img/avery-24.jpg"></div>
-          <div class="item"><img src="./dist/img/DSC01746.jpg"></div>
-          <div class="item"><img src="./dist/img/austin-26.png"></div>
-          <div class="item large"><img src="./dist/img/eprom-2.png"></div>
+	<body>
+    <div class="tabs">
+      <input type="radio" name="tabs" id="tabone" checked="checked">
+      <label for="tabone">Graphic Design</label>
+      <div class="tab">
+        <div class="container">
+          <div class="item">
+            <h2>Aurelle Brandbook</h2>
+            <img src="./dist/img/aurelle-brandbook_Page_1.png">
+            <img src="./dist/img/aurelle-brandbook_Page_2.png">
+            <img src="./dist/img/aurelle-brandbook_Page_3.png">
+            <img src="./dist/img/aurelle-brandbook_Page_4.png">
+            <img src="./dist/img/aurelle-brandbook_Page_5.png">
+            <img src="./dist/img/aurelle-brandbook_Page_6.png">
+          </div>
+          <div class="item">
+            <h2>Infused Water Social Ad</h2>
+            <img src="./dist/img/infusedwater.PNG">
+          </div>
+          <div class="item">
+            <h2>Web Design</h2>
+            <img src="./dist/img/truly-dekstop-home.png">
+            <img src="./dist/img/pokebowl-desktop.png">
+            <img src="./dist/img/olea-desktop.png">
+          </div>
         </div>
       </div>
-
-        
-        
-      </section>
-        <footer>
-          <h4>Check out some of my recent projects on my social or tap the email tab to connect for future projects.</h4>
-          <h4>Phone: (678)-520-4365</h4>
-          <h4>Email: maxambrogio1@gmail.com</h4>
-          <div class="social">
-            <a target="_blank" href="https://www.instagram.com/maxambrogio/">Instagram</a>
-            <a target="_blank" href="https://www.facebook.com/max.ambrogip/">Facebook</a>
-            <a target="_blank" href="https://www.linkedin.com/in/max-ambrogio-2786a2b1/">Linkedin</a>
-            <a target="_blank" href="./dist/img/MaxAmbrogio-Resume.pdf">Resume</a>
+      
+      <input type="radio" name="tabs" id="tabtwo">
+      <label for="tabtwo">Animation + Video Editing</label>
+      <div class="tab">
+        <div class="container animation">
+          <div class="item">
+            <h2>Bicar Food - Animation + Stock Editing</h2>
+            <video controls src="./dist/video/BicarFoodV4.mp4"></video>
           </div>
-          <a href="#">@2022 - All rights reserved - Max Ambrogio</a>
-        </footer> 
-        <div class="cursor-container">
-          <div class="cursor"></div>
+          <div class="item">
+            <h2>Care Credit Short - Animation + Video Editing</h2>
+            <video controls src="./dist/video/CARECREDIT-SHORT01.mp4"></video>
+          </div>
+          <div class="item">
+            <h2>Infused Water - Graphic Design + Animation</h2>
+            <video controls src="./dist/video/infused water music 2.mp4"></video>
+          </div>
+          <div class="item">
+            <h2>Barbie Animatino + Animation</h2>
+            <video controls src="./dist/video/Barbie-bbm.mp4"></video>
+          </div>
+          <div class="item">
+            <a href="video-production.html">
+              <h2>Link to main video page</h2>
+              <img src="./dist/img/video-page.PNG">
+            </a>
+          </div>
         </div>
-       <script>
-        // You can expand this later with filtering or modal previews
-        // document.querySelectorAll('.category').forEach(cat => {
-        //   cat.addEventListener('click', () => {
-        //     alert('You clicked on ' + cat.querySelector('h2').textContent);
-        //   });
-        // });
-      </script>
+      </div>
+      
+      <input type="radio" name="tabs" id="tabthree">
+      <label for="tabthree">Photography</label>
+      <div class="tab">
+        <div class="container photography">
+          <div class="item"><img src="./dist/img/DSC01746.jpg" alt=""></div>
+          <div class="item"><img src="./dist/img/DSC01530.jpg" alt=""></div>
+          <div class="item"><img src="./dist/img/DSC01489.jpg" alt=""></div>
+          <div class="item"><img src="./dist/img/MAX09242.JPG" alt=""></div>
+          <div class="item"><img src="./dist/img/MAX09260.JPG" alt=""></div>
+          <div class="item"><img src="./dist/img/MAX09431.JPG" alt=""></div>
+          <div class="item"><img src="./dist/img/MAX09511.JPG" alt=""></div>
+          <div class="item"><img src="./dist/img/Captains-cup-22.jpg" alt=""></div>
+          <div class="item"><img src="./dist/img/Captains-cup-33.jpg" alt=""></div>
+          <div class="item"><img src="./dist/img/Captains-cup-4.jpg" alt=""></div>
+          <div class="item"><img src="./dist/img/Captains-cup-8.jpg" alt=""></div>
+          <div class="item horizontal"><img src="./dist/img/avery-62.jpg" alt=""></div>
+          <div class="item"><img src="./dist/img/avery-24.jpg" alt=""></div>
+          <div class="item"><img src="./dist/img/avery-40.jpg" alt=""></div>
+          <div class="item"><img src="./dist/img/austin-2.png" alt=""></div>
+          <div class="item horizontal"><img src="./dist/img/austin-11.png" alt=""></div>
+          <div class="item horizontal"><img src="./dist/img/curra-8.png" alt=""></div>
+          <div class="item"><img src="./dist/img/Austin.wav-15.png" alt=""></div>
+          <div class="item"><img src="./dist/img/austin-8.png" alt=""></div>
+          <div class="item horizontal"><img src="./dist/img/eprom-3.png" alt=""></div>
+        </div>
+      </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> -->
     <script src="dist/js/ScrollTrigger.min.js"></script>
