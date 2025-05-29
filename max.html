@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page</title>
+  <link rel="stylesheet" href="dist/css/max.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <!-- <div class="swoosh"></div> -->
+      <div class="sticky-nav custom-difference flex-space-between">
+        <div class="logo"></div>
+        <div id="nav-btn" class="menu box">
+          <svg id="i1" class="icon" viewBox="20 30 60 40">
+            <path id="top-line-1" d="M30,37 L70,37 Z"></path>
+            <path id="middle-line-1" d="M30,50 L70,50 Z"></path>
+            <path id="bottom-line-1" d="M30,63 L70,63 Z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div id="takeover-nav">
+        <div class="nav-grid">
+          <div class="nav-contact bg-black flex-center position-relative">
+            <div class="position-absolute full-cover bg-topographic"></div>
+            <div class="content position-relative">
+              <h2 class="nav-title white mb-5">
+                build your digital success with us<span class="inline green">.</span>
+              </h2>
+              <ul class="contact-items white list-unstyled mb-5">
+                <li class="pb-4"><a href="#" class="text-decoration-none">+1 386-235-4062</a></li>
+                <li class="pb-4"><a href="#" class="text-decoration-none">morgan@tactusmarketing.com</a></li>
+                <li><a href="#" class="text-decoration-none">Aguadilla, PR 00603</a></li>
+              </ul>
+              <div class="social">
+                <a href="#" class="text-decoration-none green">linkedin</a>
+                <span class="mx-2 white">|</span>
+                <a href="#" class="text-decoration-none green">facebook</a>
+                <span class="mx-2 white">|</span>
+                <a href="#" class="text-decoration-none green">instagram</a>
+              </div>
+            </div>
+          </div>
+          <div class="nav-menu bg-green flex-start">
+            <ul class="nav-items list-unstyled">
+              <li class="pb-3"><a href="#" class="text-decoration-none">services</a></li>
+              <li class="pb-3"><a href="#" class="text-decoration-none">portfolio</a></li>
+              <li class="pb-3"><a href="#" class="text-decoration-none">contact</a></li>
+              <li><a href="#" class="text-decoration-none">about</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero flex-center">
+      <div class="video-wrap">
+        <video autoplay playsinline loop muted id="video-bg">
+          <source src="./dist/video/black-sandbeach.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="position-absolute w-100 gradient-overlay"></div>
+      <div class="content position-relative text-center mb-5">
+        <h1 class="hero-title blend">
+          Max Ambrogio<br> Creative Technology
+        </h1>
+      </div>
+    </section>
+
+    <section class="two">
+        <h2>Web Development</h2>
+        <div class="content-left">
+            <p class="slide-content" href="./webdev.html">
+                Using HTML, SASS, Javascript and React, I create engaging and responsive websites.
+            </p>
+        </div>
+        <div class="content-accent one">
+            <p class="slide-content">I combine my proficiency in front end development with a knowledge of user experience to develop original sites, including E-Commerce, brand, business and more.</p>
+        </div>
+    </section>
+    <section class="three">
+        <h2>3D/2D Motion Graphics</h2>
+        <div class="content-left">
+            <p class="slide-content" href="./3DRender.html">
+                My background in music and event videography eventually lead me to dive into 3D renderings and motion graphics. 
+            </p>
+        </div>
+        <div class="content-accent one">
+            <p class="slide-content">Using Blender and Cinema 4D, I have hand-crafted a variety of renderings for engineering and creative modeling, 3D printing and music production.</p>
+            <!-- <video src="/dist/video/card-three-render.mp4" loop muted="muted"></video> -->
+        </div>
+    </section>
+    <section class="four">
+        <h2>Video Production</h2>
+        <div class="content-left">
+            <p class="slide-content" href="./video-production.html">
+                Welcome to my bread and butter. For years, I've created various professional, high quality videos for numerous industries.
+            </p>
+        </div>
+        <div class="scroll">
+            <p>Videography Camera Operating Editing&#40;After Effects / Premiere Pro&#41; Videography Camera Operating Editing&#40;After Effects / Premiere Pro&#41; Videography Camera Operating Editing &#40;After Effects / Premiere Pro&#41; </p>
+        </div>
+    </section>
+    <div class="custom-cursor"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="dist/js/max.js"></script>
+</body>
+</html>
