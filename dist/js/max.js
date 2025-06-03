@@ -186,3 +186,61 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => TweenLite.to(cursor, 0.3, { opacity: 0 }), 200);
   });
 });
+
+// slider
+document.addEventListener("DOMContentLoaded", function () {
+  const sliders = document.querySelectorAll('.slider');
+
+  sliders.forEach(slider => {
+    const sWrapper = slider.querySelector('.slider-wrapper'); 
+    const sItems = slider.querySelectorAll('.slide');
+    const buttons = slider.querySelectorAll('.slider-link');
+    const sWidth = sItems[0].offsetWidth;
+    const sCount = sItems.length;
+    const slide_date = slider.querySelectorAll('.slide-date');
+    const slide_title = slider.querySelectorAll('.slide-title');
+    const slide_text = slider.querySelectorAll('.slide-text');
+    const slide_more = slider.querySelectorAll('.slide-more');
+    const slide_image = slider.querySelectorAll('.slide-image img');
+    const sTotalWidth = sCount * sWidth;
+
+    sWrapper.style.width = sTotalWidth + 'px';
+
+    let clickCount = 0;
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        if (btn.classList.contains('next')) {
+          clickCount = (clickCount < sCount - 1) ? clickCount + 1 : 0;
+        } else if (btn.classList.contains('prev')) {
+          clickCount = (clickCount > 0) ? clickCount - 1 : sCount - 1;
+        }
+
+        // Slide animation
+        gsap.to(sWrapper, {
+          duration: 0.4,
+          x: '-' + (sWidth * clickCount)
+        });
+
+        // Content animations
+        const fromProps = { autoAlpha: 0, x: -50, y: -10 };
+        const toProps   = { autoAlpha: 0.8, x: 0, y: 0 };
+
+        gsap.fromTo(slide_image, { autoAlpha: 0, y: 40 }, { duration: 1, autoAlpha: 1, y: 0 });
+        gsap.fromTo(slide_date, fromProps, { ...toProps, duration: 0.4 });
+        gsap.fromTo(slide_title, fromProps, { ...toProps, duration: 0.6 });
+        gsap.fromTo(slide_text, fromProps, { ...toProps, duration: 0.8 });
+        gsap.fromTo(slide_more, fromProps, { ...toProps, duration: 1 });
+      });
+    });
+  });
+
+  // Optional: Apply overlay class globally
+  // document.querySelector('.overlay')?.classList.add('overlay-blue');
+});
+
+
+
+
