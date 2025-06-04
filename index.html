@@ -1,381 +1,266 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="x-ua-compatible" content="ie=edge" />
-		<title>Max Ambrogio</title>
-		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">	
-		<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="dist/css/main.css" />
-	</head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Max Ambrogio</title>
+  <link rel="stylesheet" href="dist/css/max.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <!-- <div class="swoosh"></div> -->
+      <div class="sticky-nav custom-difference flex-space-between">
+        <div class="logo"></div>
+        <div id="nav-btn" class="menu box">
+          <svg id="i1" class="icon" viewBox="20 30 60 40">
+            <path id="top-line-1" d="M30,37 L70,37 Z"></path>
+            <path id="middle-line-1" d="M30,50 L70,50 Z"></path>
+            <path id="bottom-line-1" d="M30,63 L70,63 Z"></path>
+          </svg>
+        </div>
+      </div>
 
-	<body class="page-home">
-		<div class="cursor-container">
-			<div class="cursor">
-				
-			</div>
-		</div>
-		<div class="noise"></div>
-		<header id="heading" class="header section-heading">
-			<div class="logo">
-			  <a href="./index.html">
-				<img class="home" src="./dist/img/logo-outline.png" alt="max logo">
-			  </a>
-			</div>
-			
-			<nav class="navigation">
-			  
-			  <input type="checkbox" class="toggle-menu">
-			  <div class="hamburger"></div>
-			  
-			  <ul class="menu">
-				<li><a href="./index.html">Home</a></li>
-				<li><a href="./webdev.html">Web Dev</a></li>
-				<li><a href="./3DRender.html">3D Renders</a></li>
-				<li><a href="./video-production.html">Video Production</a></li>
-				<li><a href="./photo.html">Photography</a></li>
-				<li><a href="./creative-tech.html">Creative Technology</a></li>
-			  </ul>
-			</nav>
-		  </header>
-		  <main>
-			<div id="loadWrapper" class="loader-wrapper">
-				<div id="loader" class="loader">
-				</div>
-			</div>
-			<section class="section hero">
-				<div class="outer">
-					<div class="inner">
-						<div class="bg">
-							<div class="inner-container">
-								<div class="hero-container">
-									<div class="letters firstname">
-										<img src="./dist/img/37.png" alt="M">
-										<img src="./dist/img/02.png" alt="A">
-										<img src="./dist/img/71.png" alt="X">
-									</div>
-									<div class="letters lastname">
-										<img src="./dist/img/01.png" alt="A">
-										<img src="./dist/img/38.png" alt="M">
-										<img src="./dist/img/05.png" alt="B">
-										<img src="./dist/img/53.png" alt="R">
-										<img src="./dist/img/45.png" alt="O">
-										<img src="./dist/img/19.png" alt="G">
-										<img src="./dist/img/27.png" alt="I">
-										<img src="./dist/img/43.png" alt="O">
-									</div>
-					
-									<div class="letters ct-start">
-										<img src="./dist/img/08.png" alt="C">
-										<img src="./dist/img/52.png" alt="R">
-										<img src="./dist/img/13.png" alt="E">
-										<img src="./dist/img/03.png" alt="A">
-										<img src="./dist/img/60.png" alt="T">
-										<img src="./dist/img/27.png" alt="I">
-										<img src="./dist/img/64.png" alt="V">
-										<img src="./dist/img/14.png" alt="E">
-									</div>
-					
-									<div class="letters ct-end">
-										<img src="./dist/img/60.png" alt="T">
-										<img src="./dist/img/13.png" alt="E">
-										<img src="./dist/img/08.png" alt="C">
-										<img src="./dist/img/22.png" alt="H">
-										<img src="./dist/img/40.png" alt="N">
-										<img src="./dist/img/43.png" alt="O">
-										<img src="./dist/img/36.png" alt="L">
-										<img src="./dist/img/85.png" alt="O">
-										<img src="./dist/img/19.png" alt="G">
-										<img src="./dist/img/75.png" alt="Y">
-									</div>
-									
-									<div class="accent-one">
-										<img class="eye-svg" src="./dist/img/18-eye.svg">
-										<img class="svg-two" src="./dist/img/51.svg">
-										<img class="svg-three" src="./dist/img/97.svg">
-									</div>
-								
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="section webdevelopment">
-				<div id="webdev" class="outer">
-					<div class="inner">
-						<div class="bg">
-							<div class="inner-container">
-								<div class="content-grid">
-									<h2>Web Development</h2>
-									<div class="content-left">
-										<p class="slide-content" href="./webdev.html">
-											Using HTML, SASS, Javascript and React, I create engaging and responsive websites.
-										</p>
-									</div>
-									<div class="scroll">
-										<p>Languages: HTML CSS SASS PHP JAVASCRIPT C++  Languages: HTML CSS SASS PHP JAVASCRIPT C++  Languages: HTML CSS SASS PHP JAVASCRIPT C++ Languages: HTML CSS SASS PHP JAVASCRIPT C++ Languages: HTML CSS SASS PHP JAVASCRIPT C++ Languages: HTML CSS SASS PHP JAVASCRIPT C++  Languages: HTML CSS SASS PHP JAVASCRIPT C++ Languages: HTML CSS SASS PHP JAVASCRIPT C++</p>
-									</div>
-									<div class="content-right">
-										<video src="/dist/video/laptoprender-final.mp4" loop muted="muted"></video>
-									</div>
-									<div class="content-work">
-										<div class="svg-wrapper">
-											<img class="svg" src="./dist/img/97.svg">
-											<img class="svg" src="./dist/img/97.svg">
-											<img class="svg" src="./dist/img/97.svg">
-											<img class="svg" src="./dist/img/97.svg">
-											<img class="svg" src="./dist/img/97.svg">
-											<img class="svg" src="./dist/img/97.svg">
-											<img class="svg" src="./dist/img/97.svg">
-											<img class="svg" src="./dist/img/97.svg">
-											<img class="svg" src="./dist/img/97.svg">
-											<img class="svg" src="./dist/img/97.svg">
-										</div>
-										<!-- <video src="/dist/video/computer-render.mp4" loop muted="muted"></video> -->
-									</div>
-									<div class="content-accent one">
-										<p class="slide-content">I combine my proficiency in front end development with a knowledge of user experience to develop original sites, including E-Commerce, brand, business and more.</p>
-									</div>
-									<div class="content-accent two">
-									</div>
-									<div class="content-accent three">
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+      <div id="takeover-nav">
+        <div class="nav-grid">
+          <div class="nav-contact bg-black flex-center position-relative">
+            <div class="position-absolute full-cover bg-topographic"></div>
+            <div class="content position-relative">
+              <h2 class="nav-title white mb-5">
+                Contact me below<span class="inline green">.</span>
+              </h2>
+              <ul class="contact-items white list-unstyled mb-5">
+                <h4>Phone: <a href="tel+6785204365">(678)-520-4365</a></h4>
+                <h4>Email: <a href="mailto:maxambrogio1@gmail.com">maxambrogio1@gmail.com</a></h4>
+                <div class="social">
+                 <a target="_blank" href="https://www.instagram.com/maxambrogio/"><img src="./dist/img/icons8_Instagram.ico"></a>
+                 <a target="_blank" href="https://www.facebook.com/max.ambrogip/"><img src="./dist/img/facebook_50px.png"></a>
+                 <a target="_blank" href="https://www.linkedin.com/in/max-ambrogio-2786a2b1/"><img src="./dist/img/linkedin_16px.png"></a>
+                 <a target="_blank" href="./dist/img/Max Ambrogio-Resume.pdf"><img src="./dist/img/resume_50px.png"></a>
+               </div>
+              </ul>
+            </div>
+          </div>
+          <div class="nav-menu bg-green flex-start">
+            <ul class="nav-items list">
+             <a href="./webdev.html" class="text-decoration-none">Web Development</a>
+             <a href="./video-production.html" class="text-decoration-none">Videography</a>
+             <a href="./photo.html" class="text-decoration-none">Photography</a>
+              <!-- <li><a href="#" class="text-decoration-none">about</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
 
-			<section class="section animation">
-				<div id="3d" class="outer">
-					<div class="inner">
-						<div class="bg">
-							<div class="inner-container">
-								<div class="content-grid">
-									<h2>3D/2D Motion Graphics</h2>
-									<div class="content-left">
-										<p class="slide-content" href="./3DRender.html">
-											My background in music and event videography eventually lead me to dive into 3D renderings and motion graphics. 
-										</p>
-									</div>
-									<div class="scroll">
-										<p>Programs: After Effects Premiere Pro Photoshop Blender Cinema 4D TouchDesigner Programs: After Effects Premiere Pro Photoshop Blender Cinema 4D TouchDesigner Programs: After Effects Premiere Pro Photoshop Blender Cinema 4D TouchDesigner Programs: After Effects Premiere Pro Photoshop Blender Cinema 4D TouchDesigner</p>
-									</div>
-									<div class="content-right">
-										<video src="/dist/video/motion-graphics-reel.mp4" loop muted="muted"></video>
-									</div>
-									<div class="content-work">
-										<div class="gengar">
-											<div class="svg-wrapper">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-												<img class="svg" src="./dist/img/73.svg">
-											</div>
-										</div>
-										<!-- <video src="/dist/video/computer-render.mp4" loop muted="muted"></video> -->
-									</div>
-									<div class="content-accent one">
-										<p class="slide-content">Using Blender and Cinema 4D, I have hand-crafted a variety of renderings for engineering and creative modeling, 3D printing and music production.</p>
-										<!-- <video src="/dist/video/card-three-render.mp4" loop muted="muted"></video> -->
-									</div>
-									<div class="content-accent two">
-										<!-- <video src="/dist/video/card-one-render.mp4" loop muted="muted"></video> -->
-									</div>
-									<div class="content-accent three">
-										<!-- <video src="/dist/video/card-three-render.mp4" loop muted="muted"></video> -->
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+    <section class="hero flex-center">
+      <div class="video-wrap">
+        <video autoplay loop muted id="video-bg">
+          <source src="./dist/video/black-sandbeach.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="position-absolute w-100 gradient-overlay"></div>
+      <div class="content position-relative text-center mb-5">
+        <h1 class="hero-title blend">
+          Max Ambrogio<br> Creative Technology
+        </h1>
+      </div>
+    </section>
 
-			<section class="section videoproduction">
-				<div id="video" class="outer">
-					<div class="inner">
-						<div class="bg">
-							<div class="inner-container">
-								<div class="content-grid">
-									<h2>Video Production</h2>
-									<div class="content-left">
-										<p class="slide-content" href="./video-production.html">
-											Welcome to my bread and butter. For years, I've created various professional, high quality videos for numerous industries.
-										</p>
-									</div>
-									<div class="scroll">
-										<p>Videography Camera Operating Editing&#40;After Effects / Premiere Pro&#41; Videography Camera Operating Editing&#40;After Effects / Premiere Pro&#41; Videography Camera Operating Editing &#40;After Effects / Premiere Pro&#41; </p>
-									</div>
-									<div class="content-right">
-										<video src="/dist/video/video-reel.mp4" loop muted="muted"></video>
-									</div>
-									<div class="content-work">
-										<div class="bart">
-											<div class="svg-wrapper bottom">
-												<img class="svg" src="./dist/img/76.svg">
-												<img class="svg" src="./dist/img/76.svg">
-												<img class="svg" src="./dist/img/76.svg">
-												<img class="svg" src="./dist/img/76.svg">
-												<img class="svg" src="./dist/img/76.svg">
-												<img class="svg" src="./dist/img/76.svg">
-												<img class="svg" src="./dist/img/76.svg">
-												<img class="svg" src="./dist/img/76.svg">
-												<img class="svg" src="./dist/img/76.svg">
-												<img class="svg" src="./dist/img/76.svg">
-											</div>
-										</div>
-									</div>
-									<div class="content-accent one">
-										<p class="slide-content">My background in After Effects and Premiere make me your go-to guy for anything film.</p>
-										<!-- <video src="/dist/video/card-three-render.mp4" loop muted="muted"></video> -->
-									</div>
-									<div class="content-accent two">
-										<!-- <video src="/dist/video/card-one-render.mp4" loop muted="muted"></video> -->
-									</div>
-									<div class="content-accent three">
-										<!-- <video src="/dist/video/card-three-render.mp4" loop muted="muted"></video> -->
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="section creative-technology">
-				<div id="ct" class="outer">
-					<div class="inner">
-						<div class="bg">
-							<div class="inner-container">
-								<div class="content-grid">
-									<h2>Creative Tech</h2>
-									<div class="content-left">
-										<p class="slide-content" href="./creative-tech.html">
-											Beginning with extensive research, I use a combination of technology and design to effectively solve problems.
-										</p>
-									</div>
-									<!-- <div class="scroll">
-									</div> -->
-									<div class="content-right">
-										<video src="/dist/video/ct-reel.mp4" loop muted="muted"></video>
-									</div>
-									<div class="content-work">
-										<!-- <video src="/dist/video/computer-render.mp4" loop muted="muted"></video> -->
-									</div>
-									<div class="content-accent one">
-										<p class="slide-content"> My strategic technical skills change code and inputs into creative solutions that enhance original ideas.</p>
-										<!-- <video src="/dist/video/card-three-render.mp4" loop muted="muted"></video> -->
-									</div>
-									<div class="content-accent two content-right">
-										<video src="/dist/video/drone.mp4" loop muted="muted"></video>
-									</div>
-									<div class="content-accent three">
-										<div class="svg-wrapper lower">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-											<img class="svg" src="./dist/img/51.svg">
-										</div>									
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section class="section about-me">
-				<div class="outer">
-					<div class="inner">
-						<div class="bg">
-							<div class="inner-container">
-								<div class="content-grid">
-									<h2>Who am I?</h2>
-									<div class="content-left">
-										<div class="about">
-											<p class="scramble">Hi There - I'm Max Ambrogio, a Creative Technologist based in Atlanta.</p>
-											<br>
-											<p class="scramble-two">I'm well-versed in HTML, SASS and Javascript, which I use to design and create intricate websites for personal and professional use. With an extensive background in videography and motion graphics, I continue to explore new passions like 3D modeling and rendering in Cinema 4D and Blender.</p>
-										</div>
-										<div class="about">
-											<p class="scarmble-three">After exploring the film industry for a few years, I switched my interests to the forever-evolving field of creative technology. Years in the film industry lead to the evolution of my skill set; filming and editing eventually evolved into motion graphics, rendering and 3D design. Armed with those skills, a previous digital marketing agency job, and a knack for freelancing, I dove headfirst into Creative Technology. </p>
-											<br>
-											<p class="scramble-four">When I'm not troubleshooting code or rendering visuals, you can find me biking around Atlanta, checking out local farmers markets, or slowly losing my mind playing a variety of F.P.S. games on my PC. I'm also an avid soccer player and get great joy in playing on my sub-par rec team.</p>
-										</div>
-									</div>
-									<div class="content-right">
-									</div>
-					
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		<section class="section footer">
-			<div class="outer">
-				<div class="inner">
-					<div class="bg">
-						<div class="inner-container">
-							<div class="content-grid">
-								<div class="content-left">
-									<footer>
-									  <h4>Check out some of my recent projects on my social or tap the email tab to connect for future projects.</h4>
-									  <h4>Phone: (678)-520-4365</h4>
-									  <h4>Email: maxambrogio1@gmail.com</h4>
-									  <div class="social">
-										  <a target="_blank" href="https://www.instagram.com/maxambrogio/">Instagram</a>
-										  <a target="_blank" href="https://www.facebook.com/max.ambrogip/">Facebook</a>
-										  <a target="_blank" href="https://www.linkedin.com/in/max-ambrogio-2786a2b1/">Linkedin</a>
-										  <a target="_blank" href="./dist/img/MaxAmbrogio-Resume.pdf">Resume</a>
-									  </div>
-									  <a href="#">@2025 - All rights reserved - Max Ambrogio</a>
-									</footer> 
-								</div>
-								<!-- <div class="content-right"></div> -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		</main>
-		
-		<!-- <script src="dist/js/SplitText.js"></script> -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> -->
-		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-		<script src="dist/js/main.js"></script>
-	</body>
+    <section class="two">
+      <div class="section-title">
+          <h2>Web Development</h2>
+          <p class="">Using HTML, SASS, Javascript and React, I create engaging and responsive websites.</p>
+          <p class="">I combine my proficiency in front end development with a knowledge of user experience to develop original sites, including E-Commerce, brand, business and more.</p>
+        </div>
+      <div class="slider">
+        <div class="slider-wrapper flex">
+          <div class="slide flex">
+            <div class="slide-image slider-link prev"><img src="./dist/img/SQ-AMYWAIR.png"><div class="overlay"></div></div>
+            <div class="slide-content">
+              <div class="slide-date">WebDev</div>
+              <div class="slide-title"><a href="https://www.anywair.com/">anywair.tv</a></div>
+              <div class="slide-text">Description: Redesigned and developed the website for anywair.tv</div>
+              <div class="slide-more"><a href="https://www.anywair.com/">Visit Site</a></div>
+            </div>	
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/SQ-AVERY.png"><div class="overlay"></div></div>
+            <div class="slide-content">
+              <div class="slide-date">WebDev</div>
+              <div class="slide-title"><a href="https://averygoodbaker.com/">averygoodbaker.com</a></div>
+              <div class="slide-text">Description: Design and Developed a webpage for my younger sisters baking company. I wanted to focus on making the page feel like layers of a cake.</div>
+              <div class="slide-more"><a href="https://averygoodbaker.com/">Visit Site</a></div>
+            </div>	
+          </div>	
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/SQ-1FFC.png"><div class="overlay"></div></div>
+            <div class="slide-content">
+              <div class="slide-date">WebDev</div>
+              <div class="slide-title"><a href="https://invest.1ffc.com/">invest.1ffc.com</a></div>
+              <div class="slide-text">Description: Worked in tandem with the Design team to finalize the website using WordPress and Elementor. Designed and implemented a dynamic grid animation for both the index and 404 pages using Adobe After Effects. Post-launch, developed an interactive live calculator with PHP and JavaScript, and seamlessly integrated it into the site via shortcode. </div>
+              <div class="slide-more"><a href="https://invest.1ffc.com/">Visit Site</a></div>
+            </div>	
+          </div>
+            <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/SQ-NCLPS.png"><div class="overlay"></div></div>
+            <div class="slide-content">
+              <div class="slide-date">WebDev</div>
+              <div class="slide-title"><a href="https://nclps.com/">nclps.com</a></div>
+              <div class="slide-text">Description:Collaborated with the Design team to successfully complete the website using WordPress and Elementor. Developed a custom post type and template specifically for the product-gallery section, enabling the client to efficiently manage and update content and pop-ups.</div>
+              <div class="slide-more"><a href="https://nclps.com/">Visit Site</a></div>
+            </div>	
+          </div>
+        </div>
+        <div class="arrows">
+        <a href="#" title="Previous" class="arrow slider-link prev"></a>
+        <a href="#" title="Next" class="arrow slider-link next"></a>
+        </div>
+        </div>
+  </section>
+  <section class="three">
+    <div class="section-title">
+      <h2>Video Production</h2>
+      <p class="">Welcome to my bread and butter. For years, I've created various professional, high quality videos for numerous industries.</p>
+    </div>
+     <div class="slider">
+        <div class="slider-wrapper flex">
+          <div class="slide flex">
+            <div class="slide-image slider-link prev"><img src="./dist/img/SQ-MEEAN.png"><div class="overlay"></div></div>
+            <div class="slide-content">
+              <div class="slide-date">Freelance</div>
+              <div class="slide-title">Meaan Trailer</div>
+              <div class="slide-text">Meean Clothing brand trailer</div>
+              <div class="slide-more"><a href="https://maxambrogio.com/video-production">View Video</a></div>
+            </div>	
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/SQ-LOCKN.png"><div class="overlay"></div></div>
+            <div class="slide-content">
+              <div class="slide-date">Music</div>
+              <div class="slide-title">LockN Saturday recap</div>
+              <div class="slide-text">Created Daily Recap for LockN music festival in Virginia</div>
+              <div class="slide-more"><a href="https://maxambrogio.com/video-production">View Video</a></div>
+            </div>	
+          </div>	
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/sq-austin.png"><div class="overlay"></div></div>
+            <div class="slide-content">
+              <div class="slide-date">Music</div>
+              <div class="slide-title">Peekaboo Atlanta Recap</div>
+              <div class="slide-text">Peekaboo performance recap from Belive Music Hall</div>
+              <div class="slide-more"><a href="https://maxambrogio.com/video-production">View Video</a></div>
+            </div>	
+          </div>	
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/SQ-GYM.png"><div class="overlay"></div></div>
+            <div class="slide-content">
+              <div class="slide-date">Agency</div>
+              <div class="slide-title">Refinery Gym - Recap</div>
+              <div class="slide-text">Filmed and Edited hype trailer for local Atlanta Gym</div>
+              <div class="slide-more"><a href="https://maxambrogio.com/video-production">View Video</a></div>
+            </div>	
+          </div>
+            <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/SQ-ODD.png"><div class="overlay"></div></div>
+            <div class="slide-content">
+              <div class="slide-date">Animation</div>
+              <div class="slide-title">Oddli Visualizer</div>
+              <div class="slide-text">Animations for Oddli's project EP</div>
+              <div class="slide-more"><a href="https://maxambrogio.com/video-production">View Video</a></div>
+            </div>	
+          </div>
+        </div>
+        <div class="arrows">
+        <a href="#" title="Previous" class="arrow slider-link prev"></a>
+        <a href="#" title="Next" class="arrow slider-link next"></a>
+        </div>
+        </div>
+  </section>
+  <section class="four">
+    <div class="section-title">
+      <h2>Photography</h2>
+      <p class="">My background in music and event videography eventually lead me to dive into Photography and creative storytelling without the use of motion.</p>
+      <a class="link" href="./photo.html">View All</a>
+    </div>
+       <div class="slider">
+        <div class="slider-wrapper flex">
+          <div class="slide flex">
+            <div class="slide-image slider-link prev"><img src="./dist/img/mini (23).jpg"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/avery-40.jpg"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/mini (8).jpg"><div class="overlay"></div></div>
+          </div>	
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/Austin.wav-15.png"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img class="large" src="./dist/img/avery-62.jpg"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/MAX09431.JPG"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/DSC01132.jpg"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/MAX09242.JPG"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/DSC01530.jpg"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img class="large" src="./dist/img/Austin.wav-16.png"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/family-3.jpg"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img class="large" src="./dist/img/austin-11.png"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/DSC01746.jpg"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/trackstar (15).jpg"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/composite-2.jpg"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/Captains-cup-22.jpg"><div class="overlay"></div></div>
+          </div>
+          <div class="slide flex">
+            <div class="slide-image slider-link next"><img src="./dist/img/Captains-cup-33.jpg"><div class="overlay"></div></div>
+          </div>
+        </div>
+        <div class="arrows">
+        <a href="#" title="Previous" class="arrow slider-link prev"></a>
+        <a href="#" title="Next" class="arrow slider-link next"></a>
+        </div>
+        </div>
+  </section>
+   <footer>
+          <h4>Check out some of my recent projects on my social or tap the email tab to connect for future projects.</h4>
+          <h4>Phone: <a href="tel+6785204365">(678)-520-4365</a></h4>
+          <h4>Email: <a href="mailto:maxambrogio1@gmail.com">maxambrogio1@gmail.com</a></h4>
+          <div class="social">
+            <a target="_blank" href="https://www.instagram.com/maxambrogio/"><img src="./dist/img/icons8_Instagram.ico"></a>
+            <a target="_blank" href="https://www.facebook.com/max.ambrogip/"><img src="./dist/img/facebook_50px.png"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/max-ambrogio-2786a2b1/"><img src="./dist/img/linkedin_16px.png"></a>
+            <a target="_blank" href="./dist/img/Max Ambrogio-Resume.pdf"><img src="./dist/img/resume_50px.png"></a>
+          </div>
+          <a href="#">@2022 - All rights reserved - Max Ambrogio</a>
+    </footer> 
+    <div class="custom-cursor"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="dist/js/max.js"></script>
+</body>
 </html>
