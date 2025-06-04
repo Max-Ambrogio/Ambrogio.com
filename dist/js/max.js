@@ -241,6 +241,25 @@ document.addEventListener("DOMContentLoaded", function () {
   // document.querySelector('.overlay')?.classList.add('overlay-blue');
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("video-bg");
+
+  // Optional: ensure it's autoplaying and muted
+  video.autoplay = true;
+  video.muted = true;
+
+  // When the video ends, reset and play again
+  video.addEventListener("ended", function () {
+    video.currentTime = 0;
+    video.play();
+  });
+
+  // Try to start playback in case autoplay is blocked
+  video.play().catch((err) => {
+    console.warn("Autoplay failed:", err);
+  });
+});
+
 
 
 
