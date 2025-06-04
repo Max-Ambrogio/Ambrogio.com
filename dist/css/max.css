@@ -7,7 +7,7 @@
 
 html,
 body {
-  background: #efefef;
+  background: #121212;
   color: #212121;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -275,14 +275,14 @@ section {
 }
 
 section.hero {
-  background-color: #212121;
+  background-color: #121212;
   border-bottom-right-radius: 15vw;
   position: relative;
   min-height: 800px;
   height: 800px;
 }
 
-/* section.hero:before {
+ /* section.hero:before {
   content: "";
   background-color: #212121;
   position: absolute;
@@ -301,24 +301,45 @@ section.hero:after {
   width: 15vw;
   height: 15vw;
   border-top-left-radius: 15vw;
-} */
+}  */
 .section-title{
   padding-left: 3vw;
   padding-right: 3vw;
+  padding-bottom: 2vw;
+}
+.section-title h2{
+  color: #efefef;
+}
+.section-title p{
+  color: #efefef;
+}
+
+.slide-more a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
 section.two {
-  background-color: #efefef;
+  background-color: #121212;
+  border-bottom: 1px solid white;
+  padding: 25px 0px 25px 0px;
   
 }
 
 section.three {
-  background-color: #e8d1f6;
-   
+  background-color: #121212;
+   padding: 25px 0px 25px 0px;
+     border-bottom: 1px solid white;
+}
+section.three .slide-content {
+  width: 15vw; 
 }
 
 section.four {
-  background-color: #00bcd4;
+  background-color: #121212;
+  padding: 25px 0px 25px 0px;
+    border-bottom: 1px solid white;
 }
 section.four .slide-image .large {
   width: 30vw;
@@ -410,6 +431,12 @@ section.five {
   }
 }
 
+.link{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
 /* slider */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -429,6 +456,7 @@ section.five {
 
 .slider-wrapper {
   position: relative;
+  padding-bottom: 25px;
 }
 .slider-wrapper {
     /* margin-top: 5vw; */
@@ -442,11 +470,11 @@ section.five {
   width: 24vw; 
   cursor: pointer;
       border-radius: 9px;
-    border: 1px solid black
+    border: 1px solid rgb(255, 254, 254)
 }
 .slide-content {
   width: 25vw; 
-  color: #000000;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   padding-left: 10px;
@@ -471,7 +499,7 @@ section.five {
     }
 .slide-title a{
       text-decoration: none;
-      color: #000000;
+      color: #ffffff;
 
     }
 .slide-text {font-size: 0.80vw;
@@ -484,7 +512,8 @@ section.five {
    float: left; 
    font-size: 0.9vw;
   }
-.slide-bullet {width: 0.5vw;
+.slide-bullet {
+  width: 0.5vw;
    height: 0.5vw; 
    background-color: #0b8bcc; 
    border-radius: 200%; 
@@ -520,8 +549,8 @@ div.overlay-blue:hover {
      height: 1.2vw; 
      background: transparent;
       text-indent: -9999px; 
-      border-top: 0.15vw solid #000000;
-       border-left: 0.15vw solid #000000; 
+      border-top: 0.15vw solid #ffffff;
+       border-left: 0.15vw solid #ffffff; 
        transition: all .1s ease-in-out; 
        text-decoration: none; 
        color: transparent;
@@ -547,4 +576,30 @@ div.overlay-blue:hover {
    right: 0;
   }
 
+  footer{
+    background-color: #121212;
+    padding: 2vw 2vw 2vw 2vw;
+  }
+  footer h4{
+    margin: 0px !important;
+    color: white;
+    padding-bottom: 10px;
+  }
+
+  footer a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  .social{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0px;
+  }
+  .social img{
+    width: 25px;
+    height: 25px;
+  }
 
