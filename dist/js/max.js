@@ -1,3 +1,25 @@
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    const loadWrapper = document.getElementById("loadWrapper");
+
+    setTimeout(() => {
+        loader.style.transition = "opacity 0.5s ease";
+        loadWrapper.style.transition = "opacity 0.5s ease";
+
+        loader.style.opacity = "0";
+        loadWrapper.style.opacity = "0";
+
+        setTimeout(() => {
+            loader.style.display = "none";
+            loadWrapper.style.display = "none";
+        }, 500); // Matches the transition duration
+
+    }, 3000);
+  });
+
+
+
+
 // Toggle navigation menu (Vanilla JS replacement for jQuery click handler)
 document.getElementById("nav-btn").addEventListener("click", function () {
     document.getElementById("takeover-nav").classList.toggle("shown");
