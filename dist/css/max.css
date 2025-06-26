@@ -108,6 +108,7 @@ a.green {
   color: #efefef;
   position: relative;
   z-index: 2;
+  justify-self: center;
 }
 
 .bg-black {
@@ -267,6 +268,10 @@ a.green {
   font-weight: 700;
 }
 
+#takeover-nav .contact-items a{
+  color: #d413ea;
+}
+
 #takeover-nav .contact-items a:hover {
   color: #00bcd4;
 }
@@ -326,6 +331,11 @@ section.hero {
   position: relative;
   min-height: 800px;
   height: 800px;
+}
+
+.subpage{
+  height: 400px !important;
+  min-height: 400px !important;
 }
 
  /* section.hero:before {
@@ -651,4 +661,210 @@ div.overlay-blue:hover {
 
   /* photogrid */
 
- 
+ .bear-paw h2{
+  text-align: center;
+  padding: 40px 0px;
+  font-size: 36px ;
+  color: wheat;
+  border-top: 1px solid rgb(255, 255, 255) ;
+  border-bottom: 1px solid rgb(255, 255, 255) ;
+}
+.bear-paw h2:nth-child(1){
+  text-align: center;
+  padding: 40px 0px;
+  font-size: 36px ;
+  padding-top: 0px;
+  border-top: 0px solid rgb(255, 255, 255) ;
+  border-bottom: 1px solid rgb(255, 255, 255) ;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.video-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-info {
+  padding: 15px;
+}
+
+.video-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+  font-family: "Jersey 20" , sans-serif;
+}
+
+.video-desc {
+  font-size: 14px;
+  color: #666;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .video-title {
+    font-size: 1rem;
+  }
+
+  .video-desc {
+    font-size: 0.85rem;
+  }
+
+  .modal-content {
+    aspect-ratio: auto;
+    height: 60vh;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(20px);
+    gap: 20px;
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+.work{
+  margin: 2%;
+  display: flex;
+  gap: 50px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid white;
+}
+
+.work .img{
+  width: 40%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 22px;
+}
+.any-one{
+  background-image: url(/dist/img/Desktop-anywair.png);
+  background-position: center top;
+  background-size: cover;
+}
+.avery{
+  background-image: url(/dist/img/averygoodbaker-desktop.png);
+    background-position: center top;
+  background-size: cover;
+}
+.ffc{
+  background-image: url(/dist/img/1ffc-desktop.png);
+    background-position: center top;
+  background-size: cover;
+}
+.nclp{
+  background-image: url(/dist/img/nclp-desktop.png);
+    background-position: center top;
+  background-size: cover;
+}
+.bdr{
+  background-image: url(/dist/img/bdr-desktop.png);
+    background-position: center top;
+  background-size: cover;
+}
+.dvmc{
+  background-image: url(/dist/img/dvmc-desktop.png);
+    background-position: center top;
+  background-size: cover;
+}
+
+.copy{
+  width: 60%;
+}
+
+.work h2{
+  color: wheat;
+}
+.work p{
+  color: rgb(255, 255, 255);
+}
+.work a{
+  color: rgb(201, 14, 129);
+  text-decoration: none;
+
+}
+
+.bold{
+  font-weight: 800;
+  color: #00bcd4 !important;
+}
+.bold-pink{
+  font-weight: 800;
+  color: rgb(201, 14, 129);
+}
+
+@media (max-width: 600px) {
+.work{
+  flex-direction: column;
+}
+#video-bg {
+  display: none;
+}
+}

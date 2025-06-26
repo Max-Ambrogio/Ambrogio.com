@@ -11,42 +11,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">	
 		<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="dist/css/main.css" />
+		<link rel="stylesheet" href="dist/css/max.css" />
 	</head>
 
 	<body class="page-video">
-		<div class="noise"></div>
-		<header class="header">
-			<div class="logo">
-			  <a href="./index.html">
-				<img src="./dist/gif/intro.gif" alt="max logo">
-			  </a>
-			</div>
-			
-			<nav class="navigation">
-			  
-			  <input type="checkbox" class="toggle-menu">
-			  <div class="hamburger"></div>
-			  
-			  <ul class="menu">
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./webdev.html">Web Dev</a></li>
-          <li><a href="./3DRender.html">3D Renders</a></li>
-          <li><a href="./video-production.html">Video Production</a></li>
-          <li><a href="./photo.html">Photography</a></li>
-          <li><a href="./creative-tech.html">Creative Technology</a></li>
-			  </ul>
-			</nav>
-		  </header>
-
-      <main id="smooth-content">
-        
-
-    	 
-        <div class="about-pages portfolio">
-          <h1>Video Production</h1>
+		<header>
+      <!-- <div class="swoosh"></div> -->
+      <div class="sticky-nav custom-difference flex-space-between">
+        <div class="logo"></div>
+        <div id="nav-btn" class="menu box">
+          <svg id="i1" class="icon" viewBox="20 30 60 40">
+            <path id="top-line-1" d="M30,37 L70,37 Z"></path>
+            <path id="middle-line-1" d="M30,50 L70,50 Z"></path>
+            <path id="bottom-line-1" d="M30,63 L70,63 Z"></path>
+          </svg>
         </div>
-              
+      </div>
+
+      <div id="takeover-nav">
+        <div class="nav-grid">
+          <div class="nav-contact bg-black flex-center position-relative">
+            <div class="position-absolute full-cover bg-topographic"></div>
+            <div class="content position-relative">
+              <h2 class="nav-title white mb-5">
+                Contact me below<span class="inline green">.</span>
+              </h2>
+              <ul class="contact-items white list-unstyled mb-5">
+                <h4>Phone: <a href="tel+6785204365">(678)-520-4365</a></h4>
+                <h4>Email: <a href="mailto:maxambrogio1@gmail.com">maxambrogio1@gmail.com</a></h4>
+                <div class="social">
+                 <a target="_blank" href="https://www.instagram.com/maxambrogio/"><img src="./dist/img/icons8_Instagram.ico"></a>
+                 <a target="_blank" href="https://www.facebook.com/max.ambrogip/"><img src="./dist/img/facebook_50px.png"></a>
+                 <a target="_blank" href="https://www.linkedin.com/in/max-ambrogio-2786a2b1/"><img src="./dist/img/linkedin_16px.png"></a>
+                 <a target="_blank" href="./dist/img/Max Ambrogio-Resume.pdf"><img src="./dist/img/resume_50px.png"></a>
+               </div>
+              </ul>
+            </div>
+          </div>
+          <div class="nav-menu bg-green flex-start">
+            <ul class="nav-items list">
+             <a href="./index.html" class="text-decoration-none">Home</a>
+             <a href="./webdev.html" class="text-decoration-none">Web Development</a>
+             <a href="./video-production.html" class="text-decoration-none">Videography</a>
+             <a href="./photo.html" class="text-decoration-none">Photography</a>
+              <!-- <li><a href="#" class="text-decoration-none">about</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+   
+
+    <section class="hero flex-center subpage">
+      <div class="video-wrap">
+        <video autoplay loop muted id="video-bg">
+          <source src="https://maxwebsitephotos.s3.us-east-1.amazonaws.com/black-sandbeach.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="position-absolute w-100 gradient-overlay"></div>
+      <div class="content position-relative text-center mb-5">
+        <h1 class="hero-title blend">
+          Videography
+        </h1>
+      </div>
+    </section>
 
         <div class="bear-paw">
 
@@ -255,21 +283,19 @@
             </div>
           </div>
         
-        <footer>
+      <footer>
           <h4>Check out some of my recent projects on my social or tap the email tab to connect for future projects.</h4>
-          <h4>Phone: (678)-520-4365</h4>
-          <h4>Email: maxambrogio1@gmail.com</h4>
+          <h4>Phone: <a href="tel+6785204365">(678)-520-4365</a></h4>
+          <h4>Email: <a href="mailto:maxambrogio1@gmail.com">maxambrogio1@gmail.com</a></h4>
           <div class="social">
-            <a target="_blank" href="https://www.instagram.com/maxambrogio/">Instagram</a>
-            <a target="_blank" href="https://www.facebook.com/max.ambrogip/">Facebook</a>
-            <a target="_blank" href="https://www.linkedin.com/in/max-ambrogio-2786a2b1/">Linkedin</a>
-            <a target="_blank" href="./dist/img/MaxAmbrogio-Resume.pdf">Resume</a>
+            <a target="_blank" href="https://www.instagram.com/maxambrogio/"><img src="./dist/img/icons8_Instagram.ico"></a>
+            <a target="_blank" href="https://www.facebook.com/max.ambrogip/"><img src="./dist/img/facebook_50px.png"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/max-ambrogio-2786a2b1/"><img src="./dist/img/linkedin_16px.png"></a>
+            <a target="_blank" href="./dist/img/Max Ambrogio-Resume.pdf"><img src="./dist/img/resume_50px.png"></a>
           </div>
-          <a href="#">@2022 - All rights reserved - Max Ambrogio</a>
-        </footer> 
-        <div class="cursor-container">
-          <div class="cursor"></div>
-        </div>
+          <a href="#">@2025 - All rights reserved - Max Ambrogio</a>
+    </footer> 
+      <div class="custom-cursor"></div>
 
     </main>
     <script>
@@ -296,7 +322,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> -->
     <script src="dist/js/ScrollTrigger.min.js"></script>
     <script src="dist/js/ScrollSmoother.min.js"></script>
-    <script src="dist/js/main.js"></script>
+    <script src="dist/js/max.js"></script>
   </body>
 </html>
           
