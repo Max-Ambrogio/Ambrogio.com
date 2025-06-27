@@ -364,7 +364,7 @@ section.hero:after {
   padding-bottom: 2vw;
 }
 .section-title h2{
-  color: #efefef;
+  color: #e6d2c1;
 }
 .section-title p{
   color: #efefef;
@@ -372,8 +372,22 @@ section.hero:after {
 
 .slide-more a{
   text-decoration: none;
-  color: white;
+  color: rgb(243, 45, 167);
+  font-weight: bold;
   cursor: pointer;
+}
+.stack{
+  display: flex;
+  flex-direction: column !important;
+  align-self: center;
+  gap: 0px !important;
+  border-radius: 10px !important;
+  border: 1px solid white;
+  z-index: 1;
+  overflow: hidden;
+}
+.stack .slide-image img{
+  border: 0px !important;
 }
 
 section.two {
