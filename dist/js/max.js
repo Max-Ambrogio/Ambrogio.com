@@ -227,6 +227,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const sTotalWidth = sCount * sWidth;
 
     sWrapper.style.width = sTotalWidth + 'px';
+    console.log(sWrapper)
+    console.log(sWidth)
 
     let clickCount = 0;
 
