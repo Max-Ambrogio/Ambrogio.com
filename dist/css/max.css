@@ -708,6 +708,14 @@ div.overlay-blue:hover {
   border-top: 1px solid rgb(255, 255, 255) ;
   border-bottom: 1px solid rgb(255, 255, 255) ;
 }
+ .bear-paw h2{
+  text-align: center;
+  padding: 40px 0px;
+  font-size: 36px ;
+  color: wheat;
+  border-top: 1px solid rgb(255, 255, 255) ;
+  border-bottom: 1px solid rgb(255, 255, 255) ;
+}
 .bear-paw h2:nth-child(1){
   text-align: center;
   padding: 40px 0px;
