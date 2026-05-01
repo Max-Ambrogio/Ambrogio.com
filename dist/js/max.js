@@ -316,6 +316,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // overlay.addEventListener('click', hideOverlay);
 
+// Shuffle photo grid on load
+document.addEventListener("DOMContentLoaded", function () {
+  const photoGrid = document.querySelector('.photo-grid');
+  if (photoGrid) {
+    const items = Array.from(photoGrid.children);
+    // Shuffle the array using Fisher-Yates algorithm
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+    // Clear the grid and append shuffled items
+    photoGrid.innerHTML = '';
+    items.forEach(item => photoGrid.appendChild(item));
+    // Set the first 5 images to load eagerly for faster initial display
+    const images = photoGrid.querySelectorAll('img');
+    for (let i = 0; i < Math.min(5, images.length); i++) {
+      images[i].loading = 'eager';
+    }
+  }
+});
+
 
 
 

@@ -535,6 +535,7 @@ a.green {
   display: block;
   width: 100%;
   height: 100%;
+  border: 2px solid white;
   /* transition the scale and brightness of the image when hover/focus-ing on the anchor link */
   filter: brightness(0.8);
   transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
