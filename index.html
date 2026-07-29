@@ -1,301 +1,492 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Max Ambrogio</title>
-  <link rel="stylesheet" href="dist/css/max.css" />
-</head>
-<body>
-  <div class="page">
-    <div id="loadWrapper" class="loader-wrapper">
-         <div id="loader" class="loader">
-         </div>
-     </div>
 
-    <header>
-      <!-- <div class="swoosh"></div> -->
-      <div class="sticky-nav custom-difference flex-space-between">
-        <div class="logo"></div>
-        <div id="nav-btn" class="menu box">
-          <svg id="i1" class="icon" viewBox="20 30 60 40">
-            <path id="top-line-1" d="M30,37 L70,37 Z"></path>
-            <path id="middle-line-1" d="M30,50 L70,50 Z"></path>
-            <path id="bottom-line-1" d="M30,63 L70,63 Z"></path>
-          </svg>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photography portfolio design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              'syncopate': ['Syncopate', 'sans-serif'],
+              'outfit': ['Outfit', 'sans-serif'],
+              'jetbrains': ['JetBrains Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/src/styles/index.css" />
+  </head>
+
+  <body>
+    <div id="app" class="min-h-screen text-[#f0eaff] relative" style="font-family: 'Outfit', sans-serif;">
+      <!-- Fixed gradient background -->
+      <div
+        class="fixed inset-0 -z-10"
+        style="
+          background:
+            radial-gradient(ellipse 90% 70% at 10% 95%, #4DFF30 0%, transparent 48%),
+            radial-gradient(ellipse 100% 80% at 55% 45%, #D9033C 0%, transparent 55%),
+            radial-gradient(ellipse 70% 60% at 85% 5%, #2a0060 0%, transparent 60%),
+            #0e0020;
+        "
+      ></div>
+
+      <!-- Noise texture overlay -->
+      <div
+        class="fixed inset-0 -z-10 opacity-[0.03] pointer-events-none"
+        style="background-image: url('data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E');"
+      ></div>
+
+      <!-- NAV -->
+      <nav
+        id="nav"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+        style="background: transparent; backdrop-filter: none; border-bottom: none;"
+      >
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+          <a
+            href="#"
+            class="text-sm tracking-[0.3em] uppercase"
+            style="font-family: 'Syncopate', sans-serif; font-weight: 700;"
+          >
+            Max<span style="color: #4DFF30;">.</span>Ambrogio
+          </a>
+          <div class="hidden md:flex items-center gap-10">
+            <a
+              href="#work"
+              class="text-xs tracking-[0.2em] uppercase transition-colors duration-200 hover:text-[#4DFF30]"
+              style="color: rgba(240,234,255,0.6);"
+            >
+              work
+            </a>
+            <a
+              href="#about"
+              class="text-xs tracking-[0.2em] uppercase transition-colors duration-200 hover:text-[#4DFF30]"
+              style="color: rgba(240,234,255,0.6);"
+            >
+              about
+            </a>
+            <a
+              href="#contact"
+              class="text-xs tracking-[0.2em] uppercase transition-colors duration-200 hover:text-[#4DFF30]"
+              style="color: rgba(240,234,255,0.6);"
+            >
+              contact
+            </a>
+            <a
+              href="#contact"
+              class="flex items-center gap-1.5 text-xs tracking-[0.15em] uppercase px-4 py-2 transition-all duration-200 hover:bg-[#4DFF30] hover:text-[#0e0020]"
+              style="border: 1px solid #4DFF30; color: #4DFF30; font-family: 'Syncopate', sans-serif;"
+            >
+              Book
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+          </div>
+          <button
+            id="mobile-menu-toggle"
+            class="md:hidden p-2"
+            aria-label="Toggle menu"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
         </div>
-      </div>
 
-      <div id="takeover-nav">
-        <div class="nav-grid">
-          <div class="nav-contact bg-black flex-center position-relative">
-            <div class="position-absolute full-cover bg-topographic"></div>
-            <div class="content position-relative">
-              <h2 class="nav-title white mb-5">
-                Contact me below<span class="inline green">.</span>
-              </h2>
-              <ul class="contact-items white list-unstyled mb-5">
-                <h4>Phone: <a href="tel+6785204365">(678)-520-4365</a></h4>
-                <h4>Email: <a href="mailto:maxambrogio1@gmail.com">maxambrogio1@gmail.com</a></h4>
-                <div class="social">
-                 <a target="_blank" href="https://www.instagram.com/maxambrogio/"><img src="./dist/img/icons8_Instagram.ico"></a>
-                 <a target="_blank" href="https://www.facebook.com/max.ambrogip/"><img src="./dist/img/facebook_50px.png"></a>
-                 <a target="_blank" href="https://www.linkedin.com/in/max-ambrogio-2786a2b1/"><img src="./dist/img/linkedin_16px.png"></a>
-                 <a target="_blank" href="./dist/img/Max Ambrogio-Resume.pdf"><img src="./dist/img/resume_50px.png"></a>
-               </div>
-              </ul>
+        <!-- Mobile menu -->
+        <div
+          id="mobile-menu"
+          class="md:hidden px-6 pb-6 pt-2 flex flex-col gap-6 hidden"
+          style="background: rgba(14,0,32,0.95); backdrop-filter: blur(20px);"
+        >
+          <a
+            href="#work"
+            class="text-xs tracking-[0.25em] uppercase"
+            style="color: rgba(240,234,255,0.7);"
+          >
+            work
+          </a>
+          <a
+            href="#about"
+            class="text-xs tracking-[0.25em] uppercase"
+            style="color: rgba(240,234,255,0.7);"
+          >
+            about
+          </a>
+          <a
+            href="#contact"
+            class="text-xs tracking-[0.25em] uppercase"
+            style="color: rgba(240,234,255,0.7);"
+          >
+            contact
+          </a>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+      <section class="relative min-h-screen flex flex-col justify-end pb-20 px-6 md:px-12 lg:px-20 pt-32">
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="mb-4" style="color: #4DFF30; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.25em;">
+            ©2026 — Portfolio
+          </div>
+          <h1
+            class="leading-none mb-8 tracking-tight"
+            style="font-family: 'Syncopate', sans-serif; font-weight: 700; font-size: clamp(3.5rem, 12vw, 11rem); color: #f0eaff;"
+          >
+            VISUAL
+            <br />
+            <span
+              style="-webkit-text-stroke: 2px rgba(240,234,255,0.25); color: transparent;"
+            >
+              STORIES
+            </span>
+          </h1>
+          <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+            <p
+              class="text-base md:text-lg max-w-sm leading-relaxed"
+              style="color: rgba(240,234,255,0.55);"
+            >
+              Live Event & Street photography.<br />
+              Capturing the spaces between moments.
+            </p>
+            <div class="flex items-center gap-10">
+              <div class="flex flex-col">
+                <span
+                  class="text-2xl leading-none mb-1"
+                  style="font-family: 'Syncopate', sans-serif; font-weight: 700; color: #4DFF30;"
+                >
+                  150+
+                </span>
+                <span
+                  class="text-xs tracking-widest uppercase"
+                  style="color: rgba(240,234,255,0.4); font-family: 'JetBrains Mono', monospace;"
+                >
+                  Projects
+                </span>
+              </div>
+            
+              <div class="flex flex-col">
+                <span
+                  class="text-2xl leading-none mb-1"
+                  style="font-family: 'Syncopate', sans-serif; font-weight: 700; color: #4DFF30;"
+                >
+                  8yr
+                </span>
+                <span
+                  class="text-xs tracking-widest uppercase"
+                  style="color: rgba(240,234,255,0.4); font-family: 'JetBrains Mono', monospace;"
+                >
+                  Experience
+                </span>
+              </div>
             </div>
           </div>
-          <div class="nav-menu bg-green flex-start">
-            <ul class="nav-items list">
-             <a href="./webdev.html" class="text-decoration-none">Web Development</a>
-             <a href="./video-production.html" class="text-decoration-none">Videography</a>
-             <a href="./photo.html" class="text-decoration-none">Photography</a>
-              <!-- <li><a href="#" class="text-decoration-none">about</a></li> -->
-            </ul>
-          </div>
         </div>
-      </div>
-    </header>
-   
 
-    <section class="hero flex-center">
-      <div class="video-wrap">
-        <video playsinline autoplay loop muted id="video-bg">
-          <source src="https://maxwebsitephotos.s3.us-east-1.amazonaws.com/black-sandbeach.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="position-absolute w-100 gradient-overlay"></div>
-      <div class="content position-relative text-center mb-5">
-        <h1 class="hero-title blend">
-          Max Ambrogio<br> Creative Technology
-        </h1>
-      </div>
-    </section>
+        <!-- scroll cue -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+          <div
+            class="w-px h-12 animate-pulse"
+            style="background: linear-gradient(to bottom, #4DFF30, transparent);"
+          />
+          <span class="text-[10px] tracking-[0.3em] uppercase" style="color: rgba(240,234,255,0.3); font-family: 'JetBrains Mono', monospace;">
+            Scroll
+          </span>
+        </div>
+      </section>
 
-    <section class="two">
-      <div class="section-title">
-          <h2>Web Development</h2>
-          <p class="">Using HTML, SASS, Javascript and React, I create engaging and responsive websites.</p>
-          <p class="">I combine my proficiency in front end development with a knowledge of user experience to develop original sites, including E-Commerce, brand, business and more.</p>
-          <a class="link bold-pink" href="./webdev.html">View All</a>
-        </div>
-      <div class="slider">
-        <div class="slider-wrapper ">
-          <div class="slide flex">
-            <div class="slide-image slider-link prev"><img src="./dist/img/SQ-AMYWAIR.png"><div class="overlay"></div></div>
-            <div class="slide-content">
-              <div class="slide-date">WebDev</div>
-              <div class="slide-title"><a href="https://www.anywair.com/">anywair.tv</a></div>
-              <div class="slide-text">Redesigned and developed the website for anywair.tv</div>
-              <div class="slide-more"><a href="https://www.anywair.com/">Visit Site</a></div>
-            </div>	
+      <!-- GALLERY -->
+      <section id="work" class="py-24 px-6 md:px-12 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+            <h2
+              class="text-3xl tracking-tight"
+              style="font-family: 'Syncopate', sans-serif; font-weight: 700;"
+            >
+              SELECTED<br />WORK
+            </h2>
+
+            <!-- Filters -->
+            <div class="flex flex-wrap gap-2" id="filters">
+              <button
+                data-category="all"
+                class="px-4 py-2 text-xs tracking-[0.2em] uppercase transition-all duration-200"
+                style="font-family: 'JetBrains Mono', monospace; background: #4DFF30; color: #0e0020; border: 1px solid #4DFF30;"
+              >
+                All Work
+              </button>
+              <button
+                data-category="portrait"
+                class="px-4 py-2 text-xs tracking-[0.2em] uppercase transition-all duration-200"
+                style="font-family: 'JetBrains Mono', monospace; background: rgba(255,255,255,0.07); color: rgba(240,234,255,0.6); border: 1px solid rgba(255,255,255,0.1);"
+              >
+                Portrait
+              </button>
+              
+              <button
+                data-category="street"
+                class="px-4 py-2 text-xs tracking-[0.2em] uppercase transition-all duration-200"
+                style="font-family: 'JetBrains Mono', monospace; background: rgba(255,255,255,0.07); color: rgba(240,234,255,0.6); border: 1px solid rgba(255,255,255,0.1);"
+              >
+                Street
+              </button>
+              <button
+                data-category="liveevent"
+                class="px-4 py-2 text-xs tracking-[0.2em] uppercase transition-all duration-200"
+                style="font-family: 'JetBrains Mono', monospace; background: rgba(255,255,255,0.07); color: rgba(240,234,255,0.6); border: 1px solid rgba(255,255,255,0.1);"
+              >
+                Live Event
+              </button>
+            </div>
           </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/SQ-AVERY.png"><div class="overlay"></div></div>
-            <div class="slide-content">
-              <div class="slide-date">WebDev</div>
-              <div class="slide-title"><a href="https://averygoodbaker.com/">averygoodbaker.com</a></div>
-              <div class="slide-text">Design and Developed a webpage for a baking company. I wanted to focus on making the page feel like layers of a cake.</div>
-              <div class="slide-more"><a href="https://averygoodbaker.com/">Visit Site</a></div>
-            </div>	
-          </div>	
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/SQ-1FFC.png"><div class="overlay"></div></div>
-            <div class="slide-content">
-              <div class="slide-date">WebDev</div>
-              <div class="slide-title"><a href="https://invest.1ffc.com/">invest.1ffc.com</a></div>
-              <div class="slide-text">Worked in tandem with the Design team to finalize the website using WordPress and Elementor. Designed and implemented a dynamic grid animation for both the index and 404 pages using Adobe After Effects. Post-launch, developed an interactive live calculator with PHP and JavaScript, and seamlessly integrated it into the site via shortcode. </div>
-              <div class="slide-more"><a href="https://invest.1ffc.com/">Visit Site</a></div>
-            </div>	
+
+          <!-- Masonry grid -->
+          <div class="columns-1 sm:columns-2 lg:columns-3 gap-3 space-y-3" id="gallery">
+            <!-- Photos will be inserted here by JavaScript -->
           </div>
-            <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/SQ-NCLPS.png"><div class="overlay"></div></div>
-            <div class="slide-content">
-              <div class="slide-date">WebDev</div>
-              <div class="slide-title"><a href="https://nclps.com/">nclps.com</a></div>
-              <div class="slide-text">Collaborated with the Design team to successfully complete the website using WordPress and Elementor. Developed a custom post type and template specifically for the product-gallery section, enabling the client to efficiently manage and update content and pop-ups.</div>
-              <div class="slide-more"><a href="https://nclps.com/">Visit Site</a></div>
-            </div>	
+
+          <div id="no-work" class="py-32 text-center hidden" style="color: rgba(240,234,255,0.3);">
+            No work in this category yet.
           </div>
         </div>
-        <div class="arrows">
-        <a href="#" title="Previous" class="arrow slider-link prev"></a>
-        <a href="#" title="Next" class="arrow slider-link next"></a>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="py-24 px-6 md:px-12 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 p-10 md:p-16"
+            style="background: rgba(14, 0, 32, 0.55); backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.08);"
+          >
+            <div class="flex flex-col justify-between gap-10">
+              <div>
+                <span
+                  class="text-xs tracking-[0.3em] uppercase mb-6 block"
+                  style="color: #4DFF30; font-family: 'JetBrains Mono', monospace;"
+                >
+                  About the Creator
+                </span>
+                <h2
+                  class="text-4xl md:text-5xl leading-tight mb-8"
+                  style="font-family: 'Syncopate', sans-serif; font-weight: 700; letter-spacing: -0.01em;"
+                >
+                  Max
+                  <br />
+                  Ambrogio
+                </h2>
+                <p class="text-base leading-relaxed mb-5" style="color: rgba(240,234,255,0.65);">
+                  With a background in live event coverage and the music industry, Max has built a career at the intersection of creativity and technology. Before joining Ambro Sport, he spent four years at Bearpaw Partners and two years at Brownbag Marketing, where he balanced video production with front-end development—creating responsive websites, social animations, and content designed to drive engagement.
+
+                </p>
+              
+              </div>
+
+              <div class="flex flex-wrap gap-4">
+                <div
+                  class="flex-1 min-w-[100px] px-5 py-4"
+                  style="border: 1px solid rgba(255,255,255,0.1);"
+                >
+                  <div
+                    class="text-[10px] tracking-[0.25em] uppercase"
+                    style="color: rgba(240,234,255,0.4); font-family: 'JetBrains Mono', monospace;"
+                  >
+                                        <img src="https://res.cloudinary.com/ds9ru6lxp/image/upload/v1785305526/Pokras_Calligrafuturism_Sticker_by_POST-WEB_2_d6zzzp.gif" alt="Awards" class="w-full h-full object-contain">
+
+                  </div>
+                </div>
+                <div
+                  class="flex-1 min-w-[100px] px-5 py-4"
+                  style="border: 1px solid rgba(255,255,255,0.1);"
+                >
+                  <div
+                    class="text-[10px] tracking-[0.25em] uppercase"
+                    style="color: rgba(240,234,255,0.4); font-family: 'JetBrains Mono', monospace;"
+                  >
+                  <img src="https://res.cloudinary.com/ds9ru6lxp/image/upload/v1785305312/Pokras_Calligrafuturism_Sticker_by_POST-WEB_uwpmnt.gif" alt="Awards" class="w-full h-full object-contain">
+
+                  </div>
+                </div>
+                <div
+                  class="flex-1 min-w-[100px] px-5 py-4"
+                  style="border: 1px solid rgba(255,255,255,0.1);"
+                >
+                  <div
+                    class="text-[10px] tracking-[0.25em] uppercase"
+                    style="color: rgba(240,234,255,0.4); font-family: 'JetBrains Mono', monospace;"
+                  >
+                                                          <img src="https://res.cloudinary.com/ds9ru6lxp/image/upload/v1785305533/Pokras_Calligrafuturism_Sticker_by_POST-WEB_1_mh3sxf.gif" alt="Awards" class="w-full h-full object-contain">
+  
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portrait image -->
+            <div class="relative">
+              <img
+                src="https://res.cloudinary.com/ds9ru6lxp/image/upload/v1779214075/profile-one_eydvh2.jpg"
+                alt="Max Ambrogio, photographer"
+                class="w-full object-cover"
+                style="aspect-ratio: 3/4; max-height: 520px; background: #1a0035;"
+              />
+              <div
+                class="absolute bottom-0 right-0 w-2/3 h-1/3 pointer-events-none"
+                style="background: linear-gradient(135deg, transparent 40%, rgba(77,255,48,0.12) 100%);"
+              />
+              <!-- Accent border -->
+              <div
+                class="absolute -bottom-3 -right-3 w-full h-full -z-10 pointer-events-none"
+                style="border: 1px solid rgba(217,3,60,0.3);"
+              />
+            </div>
+          </div>
         </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="py-24 px-6 md:px-12 lg:px-20">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="py-20 px-10 md:px-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-12"
+            style="border: 1px solid rgba(255,255,255,0.08);"
+          >
+            <div>
+              <h2
+                class="text-4xl md:text-6xl leading-none mb-4"
+                style="font-family: 'Syncopate', sans-serif; font-weight: 700;"
+              >
+                LET'S
+                <br />
+                <span style="color: #D9033C;">WORK.</span>
+              </h2>
+              <p class="text-sm mt-6" style="color: rgba(240,234,255,0.45);">
+                Available for editorial, commercial, and fine art commissions.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-5">
+              <a
+                href="mailto:max@ambrosport.com"
+                class="flex items-center gap-3 text-sm group"
+                style="color: #f0eaff;"
+              >
+                <span
+                  class="text-[10px] tracking-widest uppercase mr-2"
+                  style="color: rgba(240,234,255,0.4); font-family: 'JetBrains Mono', monospace;"
+                >
+                  Email
+                </span>
+                <span class="group-hover:underline decoration-[#4DFF30] underline-offset-4 transition-all">
+                  max@ambrosport.com
+                </span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #4DFF30;">
+                  <path d="m9 18 6-6-6-6"/>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/maxambrogio/"
+                class="flex items-center gap-3 text-sm group"
+                style="color: #f0eaff;"
+              >
+                <span
+                  class="text-[10px] tracking-widest uppercase mr-2"
+                  style="color: rgba(240,234,255,0.4); font-family: 'JetBrains Mono', monospace;"
+                >
+                  Instagram
+                </span>
+                <span class="group-hover:underline decoration-[#4DFF30] underline-offset-4 transition-all">
+                  @maxambrogio
+                </span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #4DFF30;">
+                  <path d="m9 18 6-6-6-6"/>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/maxambrogio/"
+                class="mt-4 inline-flex items-center gap-3 px-8 py-4 text-sm tracking-[0.2em] uppercase transition-all duration-200 hover:bg-[#D9033C]"
+                style="font-family: 'Syncopate', sans-serif; font-size: 0.7rem; background: #D9033C; color: #fff;"
+              >
+                Book a Session
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m9 18 6-6-6-6"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
+            style="border-top: 1px solid rgba(255,255,255,0.06);"
+          >
+            <span
+              class="text-xs tracking-[0.25em] uppercase"
+              style="font-family: 'Syncopate', sans-serif; color: rgba(240,234,255,0.3);"
+            >
+              Max<span style="color: #4DFF30;">.</span>Ambrogio
+            </span>
+            <span
+              class="text-[10px] tracking-widest"
+              style="color: rgba(240,234,255,0.2); font-family: 'JetBrains Mono', monospace;"
+            >
+              © 2026 — All rights reserved
+            </span>
+          </div>
         </div>
-  </section>
-  <section class="three">
-    <div class="section-title">
-      <h2>Video Production</h2>
-      <p class="">Welcome to my bread and butter. For years, I've created various professional, high quality videos for numerous industries.</p>
-      <a class="link bold-pink" href="./video-production.html">View All</a>
+      </section>
+
+      <!-- LIGHTBOX -->
+      <div
+        id="lightbox"
+        class="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 hidden"
+        style="background: rgba(14,0,32,0.96); backdrop-filter: blur(32px);"
+      >
+        <button
+          id="lightbox-close"
+          class="absolute top-5 right-5 p-2.5 transition-colors hover:bg-white/10"
+          style="border: 1px solid rgba(255,255,255,0.15); color: #f0eaff;"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6L6 18"/>
+            <path d="M6 6l12 12"/>
+          </svg>
+        </button>
+
+        <button
+          id="lightbox-prev"
+          class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-2.5 transition-colors hover:bg-white/10"
+          style="border: 1px solid rgba(255,255,255,0.15); color: #f0eaff;"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m15 18-6-6 6-6"/>
+          </svg>
+        </button>
+
+        <button
+          id="lightbox-next"
+          class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-2.5 transition-colors hover:bg-white/10"
+          style="border: 1px solid rgba(255,255,255,0.15); color: #f0eaff;"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </button>
+
+        <div class="flex flex-col items-center max-w-5xl w-full" id="lightbox-content">
+          <!-- Lightbox content will be inserted here -->
+        </div>
+      </div>
     </div>
-     <div class="slider">
-        <div class="slider-wrapper ">
-          <div class="slide flex">
-            <div class="slide-image slider-link prev"><img src="./dist/img/SQ-MEEAN.png"><div class="overlay"></div></div>
-            <div class="slide-content">
-              <div class="slide-date">Freelance</div>
-              <div class="slide-title">Meaan Trailer</div>
-              <div class="slide-text">Meean Clothing brand trailer</div>
-              <div class="slide-more"><a href="https://maxambrogio.com/video-production">View Video</a></div>
-            </div>	
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/SQ-LOCKN.png"><div class="overlay"></div></div>
-            <div class="slide-content">
-              <div class="slide-date">Music</div>
-              <div class="slide-title">LockN Saturday recap</div>
-              <div class="slide-text">Created Daily Recap for LockN music festival in Virginia</div>
-              <div class="slide-more"><a href="https://maxambrogio.com/video-production">View Video</a></div>
-            </div>	
-          </div>	
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/sq-austin.png"><div class="overlay"></div></div>
-            <div class="slide-content">
-              <div class="slide-date">Music</div>
-              <div class="slide-title">Peekaboo Atlanta Recap</div>
-              <div class="slide-text">Peekaboo performance recap from Belive Music Hall</div>
-              <div class="slide-more"><a href="https://maxambrogio.com/video-production">View Video</a></div>
-            </div>	
-          </div>	
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/SQ-GYM.png"><div class="overlay"></div></div>
-            <div class="slide-content">
-              <div class="slide-date">Agency</div>
-              <div class="slide-title">Refinery Gym - Recap</div>
-              <div class="slide-text">Filmed and Edited hype trailer for local Atlanta Gym</div>
-              <div class="slide-more"><a href="https://maxambrogio.com/video-production">View Video</a></div>
-            </div>	
-          </div>
-            <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/SQ-ODD.png"><div class="overlay"></div></div>
-            <div class="slide-content">
-              <div class="slide-date">Animation</div>
-              <div class="slide-title">Oddli Visualizer</div>
-              <div class="slide-text">Animations for Oddli's project EP</div>
-              <div class="slide-more"><a href="https://maxambrogio.com/video-production">View Video</a></div>
-            </div>	
-          </div>
-        </div>
-        <div class="arrows">
-        <a href="#" title="Previous" class="arrow slider-link prev"></a>
-        <a href="#" title="Next" class="arrow slider-link next"></a>
-        </div>
-        </div>
-  </section>
-  <section class="four">
-    <div class="section-title">
-      <h2>Photography</h2>
-      <p class="">My background in music and event videography eventually lead me to dive into Photography and creative storytelling without the use of motion.</p>
-      <a class="link bold-pink" href="./photo.html">View All</a>
-    </div>
-       <div class="slider">
-        <div class="slider-wrapper ">
 
-          <div class="slide flex">
-            <div class="slide-image slider-link prev"><img src="https://maxwebsitephotos.s3.us-east-1.amazonaws.com/streetstyle-7.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide stack flex">
-            <div class="slide-image slider-link prev"><img src="https://maxwebsitephotos.s3.us-east-1.amazonaws.com/streetstyle-19.jpg"><div class="overlay"></div></div>
-            <div class="slide-image slider-link prev"><img src="https://maxwebsitephotos.s3.us-east-1.amazonaws.com/streetstyle-32.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide stack flex">
-            <div class="slide-image slider-link prev"><img src="https://maxwebsitephotos.s3.us-east-1.amazonaws.com/streetstyle-14.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link prev"><img src="./dist/img/insta-edit_03.png"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link prev"><img src="./dist/img/insta-edit_04.png"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link prev"><img src="./dist/img/insta-edit_06.png"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link prev"><img src="./dist/img/mini (23).jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link prev"><img src="./dist/img/snee+sean-29.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/mini (8).jpg"><div class="overlay"></div></div>
-          </div>	
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/DSC01746.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/trackstar (15).jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/DSC01530.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/composite-2.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/austin-8.png"><div class="overlay"></div></div>
-          </div>
-          <div class="slide stack flex">
-            <div class="slide-image slider-link next"><img class="large" src="./dist/img/Austin.wav-16.png"><div class="overlay"></div></div>
-            <div class="slide-image slider-link next"><img class="large" src="./dist/img/austin-11.png"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/Austin.wav-15.png"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/DSC01132.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/family-3.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/MAX09431.JPG"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/MAX09242.JPG"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img class="large" src="./dist/img/avery-62.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/avery-40.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/Captains-cup-22.jpg"><div class="overlay"></div></div>
-          </div>
-          <div class="slide flex">
-            <div class="slide-image slider-link next"><img src="./dist/img/Captains-cup-33.jpg"><div class="overlay"></div></div>
-          </div>
-          
-        </div>
-        <div class="arrows">
-        <a href="#" title="Previous" class="arrow slider-link prev"></a>
-        <a href="#" title="Next" class="arrow slider-link next"></a>
-        </div>
-        </div>
-  </section>
-   <footer>
-          <h4>Check out some of my recent projects on my social or tap the email tab to connect for future projects.</h4>
-          <h4>Phone: <a href="tel+6785204365">(678)-520-4365</a></h4>
-          <h4>Email: <a href="mailto:maxambrogio1@gmail.com">maxambrogio1@gmail.com</a></h4>
-          <div class="social">
-            <a target="_blank" href="https://www.instagram.com/maxambrogio/"><img src="./dist/img/icons8_Instagram.ico"></a>
-            <a target="_blank" href="https://www.facebook.com/max.ambrogip/"><img src="./dist/img/facebook_50px.png"></a>
-            <a target="_blank" href="https://www.linkedin.com/in/max-ambrogio-2786a2b1/"><img src="./dist/img/linkedin_16px.png"></a>
-            <a target="_blank" href="./dist/img/Max Ambrogio-Resume.pdf"><img src="./dist/img/resume_50px.png"></a>
-          </div>
-          <a href="#">@2025 - All rights reserved - Max Ambrogio</a>
-    </footer> 
-  <div class="custom-cursor"></div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-  <script src="dist/js/max.js"></script>
-</body>
+    <script src="/src/script.js"></script>
+  </body>
 </html>
+  
