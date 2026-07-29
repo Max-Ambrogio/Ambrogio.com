@@ -392,7 +392,7 @@ const photos = [
     location: "Atlanta, GA",
     year: "2025",
     category: "liveevents",
-    span: "wide",
+    span: "square",
   },
   {
     id: 40,
@@ -401,7 +401,7 @@ const photos = [
     location: "Atlanta, GA",
     year: "2025",
     category: "liveevents",
-    span: "wide",
+    span: "square",
   },
   {
     id: 41,
@@ -410,7 +410,7 @@ const photos = [
     location: "Atlanta, GA",
     year: "2025",
     category: "liveevents",
-    span: "wide",
+    span: "square",
   },
   {
     id: 42,
@@ -428,7 +428,7 @@ const photos = [
     location: "Atlanta, GA",
     year: "2025",
     category: "liveevents",
-    span: "wide",
+    span: "square",
   },
   {
     id: 44,
@@ -437,7 +437,7 @@ const photos = [
     location: "Atlanta, GA",
     year: "2025",
     category: "liveevents",
-    span: "wide",
+    span: "square",
   },
   {
     id: 45,
@@ -446,7 +446,7 @@ const photos = [
     location: "Atlanta, GA",
     year: "2025",
     category: "liveevents",
-    span: "wide",
+    span: "square",
   },
   {
     id: 46,
