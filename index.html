@@ -29,8 +29,8 @@
         class="fixed inset-0 -z-10"
         style="
           background:
-            radial-gradient(ellipse 90% 70% at 10% 95%, #4DFF30 0%, transparent 48%),
-            radial-gradient(ellipse 100% 80% at 55% 45%, #D9033C 0%, transparent 55%),
+            radial-gradient(ellipse 90% 70% at 10% 95%, #4cff302c 0%, transparent 48%),
+            radial-gradient(ellipse 100% 80% at 55% 45%, #d9033c45 0%, transparent 55%),
             radial-gradient(ellipse 70% 60% at 85% 5%, #2a0060 0%, transparent 60%),
             #0e0020;
         "
@@ -135,10 +135,11 @@
       <!-- HERO -->
       <section class="relative min-h-screen flex flex-col justify-end pb-20 px-6 md:px-12 lg:px-20 pt-32">
         <div class="max-w-7xl mx-auto w-full">
-          <div class="mb-4" style="color: #4DFF30; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.25em;">
+          <div id="hero-eyebrow" class="mb-4" style="color: #4DFF30; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.25em;">
             ©2026 — Portfolio
           </div>
           <h1
+            id="hero-title"
             class="leading-none mb-8 tracking-tight"
             style="font-family: 'Syncopate', sans-serif; font-weight: 700; font-size: clamp(3.5rem, 12vw, 11rem); color: #f0eaff;"
           >
@@ -150,12 +151,12 @@
               STORIES
             </span>
           </h1>
-          <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+          <div id="hero-details" class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
             <p
               class="text-base md:text-lg max-w-sm leading-relaxed"
               style="color: rgba(240,234,255,0.55);"
             >
-              Live Event & Street photography.<br />
+              Live Event & Lifestyle photography.<br />
               Capturing the spaces between moments.
             </p>
             <div class="flex items-center gap-10">
@@ -179,7 +180,7 @@
                   class="text-2xl leading-none mb-1"
                   style="font-family: 'Syncopate', sans-serif; font-weight: 700; color: #4DFF30;"
                 >
-                  8yr
+                  8yrs
                 </span>
                 <span
                   class="text-xs tracking-widest uppercase"
@@ -267,7 +268,7 @@
             class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 p-10 md:p-16"
             style="background: rgba(14, 0, 32, 0.55); backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.08);"
           >
-            <div class="flex flex-col justify-between gap-10">
+            <div id="about-copy" class="flex flex-col justify-between gap-10">
               <div>
                 <span
                   class="text-xs tracking-[0.3em] uppercase mb-6 block"
@@ -284,7 +285,7 @@
                   Ambrogio
                 </h2>
                 <p class="text-base leading-relaxed mb-5" style="color: rgba(240,234,255,0.65);">
-                  With a background in live event coverage and the music industry, Max has built a career at the intersection of creativity and technology. Before joining Ambro Sport, he spent four years at Bearpaw Partners and two years at Brownbag Marketing, where he balanced video production with front-end development—creating responsive websites, social animations, and content designed to drive engagement.
+                  With a background in live event coverage and the music industry, Max has built a career at the intersection of creativity and technology. Before joining Ambro Sport, he spent four years at Bearpaw Partners and two years at Brown bag Marketing, where he balanced photography and video production with front-end development, creating responsive websites, social animations, and content designed to drive engagement.
 
                 </p>
               
@@ -331,7 +332,7 @@
             </div>
 
             <!-- Portrait image -->
-            <div class="relative">
+            <div id="about-image" class="relative">
               <img
                 src="https://res.cloudinary.com/ds9ru6lxp/image/upload/v1779214075/profile-one_eydvh2.jpg"
                 alt="Max Ambrogio, photographer"
@@ -486,6 +487,8 @@
       </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="/src/script.js"></script>
   </body>
 </html>

@@ -315,12 +315,12 @@ const photos = [
   },
   {
     id: 31,
-    src: "https://res.cloudinary.com/ds9ru6lxp/image/upload/v1785261115/stvsh-orl-3_pjwfke.jpg",
-    title: "STVSH + Cozy Kev",
-    location: "Orlando, FL",
+    src: "https://res.cloudinary.com/ds9ru6lxp/image/upload/v1785345988/max_ncwx6i.jpg",
+    title: "Travel",
+    location: "Lima, Peru",
     year: "2026",
     category: "street",
-    span: "square",
+    span: "tall",
   },
   {
     id: 32,
@@ -503,6 +503,12 @@ const lightboxClose = document.getElementById('lightbox-close');
 const lightboxPrev = document.getElementById('lightbox-prev');
 const lightboxNext = document.getElementById('lightbox-next');
 const lightboxContent = document.getElementById('lightbox-content');
+const heroEyebrow = document.getElementById('hero-eyebrow');
+const heroTitle = document.getElementById('hero-title');
+const heroDetails = document.getElementById('hero-details');
+const aboutSection = document.getElementById('about');
+const aboutCopy = document.getElementById('about-copy');
+const aboutImage = document.getElementById('about-image');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -511,7 +517,40 @@ document.addEventListener('DOMContentLoaded', () => {
   updateFilterButtons();
   setupEventListeners();
   setupScrollHandler();
+  animateHero();
+  animateAbout();
 });
+
+function animateHero() {
+  if (!window.gsap) return;
+
+  gsap.set([heroEyebrow, heroTitle, heroDetails], { opacity: 0 });
+
+  const timeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
+  timeline
+    .fromTo(heroEyebrow, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.7 })
+    .fromTo(heroTitle, { opacity: 0, y: 42 }, { opacity: 1, y: 0, duration: 1 }, '-=0.35')
+    .fromTo(heroDetails, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8 }, '-=0.5');
+}
+
+function animateAbout() {
+  if (!window.gsap || !window.ScrollTrigger || !aboutSection) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const aboutTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: aboutSection,
+      start: 'top 75%',
+      once: true,
+    },
+    defaults: { ease: 'power3.out' },
+  });
+
+  aboutTimeline
+    .fromTo(aboutCopy, { opacity: 0, x: -36 }, { opacity: 1, x: 0, duration: 0.85 })
+    .fromTo(aboutImage, { opacity: 0, x: 36 }, { opacity: 1, x: 0, duration: 0.85 }, '-=0.6');
+}
 
 function shufflePhotos(items) {
   const shuffled = [...items];
