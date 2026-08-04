@@ -660,6 +660,39 @@ function animateAbout() {
     .fromTo(aboutImage, { opacity: 0, x: 36 }, { opacity: 1, x: 0, duration: 0.85 }, '-=0.6');
 }
 
+function animateGallery() {
+  if (!window.gsap || !window.ScrollTrigger || !gallery) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const photoItems = gsap.utils.toArray('.photo-item');
+
+  gsap.fromTo(
+    photoItems,
+    {
+      autoAlpha: 0,
+      y: 32,
+      scale: 0.98,
+      opacity: 0,
+    },
+    {
+      autoAlpha: 1,
+      y: 0,
+      scale: 1,
+      opacity: 1,
+      duration: 0.75,
+      ease: 'power3.out',
+      delay: 0.1,
+      stagger: 0.05,
+      scrollTrigger: {
+        trigger: gallery,
+        start: 'top 82%',
+        once: true,
+      },
+    }
+  );
+}
+
 function shufflePhotos(items) {
   const shuffled = [...items];
 
@@ -820,21 +853,9 @@ function renderGallery() {
   filtered.forEach((photo, index) => {
     const photoElement = createPhotoElement(photo, index);
     gallery.appendChild(photoElement);
-
-    if (window.gsap) {
-      gsap.fromTo(
-        photoElement,
-        { autoAlpha: 0, y: 28 },
-        {
-          autoAlpha: 1,
-          y: 0,
-          duration: 0.55,
-          ease: 'power3.out',
-          delay: index * 0.035,
-        }
-      );
-    }
   });
+
+  animateGallery();
 }
 
 // Create photo element
